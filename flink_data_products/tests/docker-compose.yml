@@ -1,0 +1,80 @@
+services:
+  # Flink JobManager
+  jobmanager:
+    image: flink:1.20.2-scala_2.12-java17
+    hostname: jobmanager
+    container_name: flink-jobmanager
+    ports:
+      - "8081:8081"  # Flink Web UI
+      - "6123:6123"  # Flink RPC port
+    command: jobmanager
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        heartbeat.interval: 1000
+        heartbeat.timeout: 5000
+        rest.flamegraph.enabled: true
+        web.backpressure.refresh-interval: 10000
+    volumes:
+      - ./sources:/opt/tests/sources
+      - ./logs:/opt/flink/log
+    networks:
+      - flink-network
+
+  # Flink TaskManager
+  taskmanager:
+    image: flink:1.20.2-scala_2.12-java17
+    hostname: taskmanager
+    container_name: flink-taskmanager
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    scale: 1
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 2
+        parallelism.default: 1
+        heartbeat.interval: 1000
+        heartbeat.timeout: 5000
+    volumes:
+      - ./sources:/opt/tests/sources
+      - ./logs:/opt/flink/log
+    networks:
+      - flink-network
+
+  # Python environment for PyFlink
+  pyflink-runner:
+    image: python:3.12
+    container_name: pyflink-runner
+    depends_on:
+      - jobmanager
+      - taskmanager
+    working_dir: /opt/tests
+    volumes:
+      - ./sources:/opt/tests/sources
+      - ./logs:/opt/tests/logs
+    environment:
+      - PYTHONPATH=/opt/tests
+    networks:
+      - flink-network
+    command: |
+      bash -c "
+        echo 'Installing PyFlink dependencies...'
+`
+        pip install --no-cache-dir apache-flink>=1.20.0 pyflink
+        echo 'PyFlink environment ready!'
+        echo 'JobManager Web UI: http://localhost:8081'
+        echo 'To run tests: docker-compose exec pyflink-runner python sources/test_raw_sales_events.py'
+        tail -f /dev/null
+      "
+
+networks:
+  flink-network:
+    driver: bridge
+
+volumes:
+  flink-logs:
+    driver: local

@@ -1,0 +1,50 @@
+{
+    "saleops_dim_customer": {
+        "table_name": "saleops_dim_customer",
+        "product_name": "saleops",
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/saleops/dim_customer/sql-scripts/dml.saleops_dim_customer.sql",
+        "ddl_ref": "pipelines/dimensions/saleops/dim_customer/sql-scripts/ddl.saleops_dim_customer.sql",
+        "table_folder_name": "pipelines/dimensions/saleops/dim_customer"
+    },
+    "saleops_dim_product": {
+        "table_name": "saleops_dim_product",
+        "product_name": "saleops",
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/saleops/dim_product/sql-scripts/dml.saleops_dim_product.sql",
+        "ddl_ref": "pipelines/dimensions/saleops/dim_product/sql-scripts/ddl.saleops_dim_product.sql",
+        "table_folder_name": "pipelines/dimensions/saleops/dim_product"
+    },
+    "saleops_dim_time": {
+        "table_name": "saleops_dim_time",
+        "product_name": "saleops",
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/saleops/dim_time/sql-scripts/dml.saleops_dim_time.sql",
+        "ddl_ref": "pipelines/dimensions/saleops/dim_time/sql-scripts/ddl.saleops_dim_time.sql",
+        "table_folder_name": "pipelines/dimensions/saleops/dim_time"
+    },
+    "saleops_fct_revenu": {
+        "table_name": "saleops_fct_revenu",
+        "product_name": "saleops",
+        "type": "fact",
+        "dml_ref": "pipelines/facts/saleops/fct_revenu/sql-scripts/dml.saleops_fct_revenu.sql",
+        "ddl_ref": "pipelines/facts/saleops/fct_revenu/sql-scripts/ddl.saleops_fct_revenu.sql",
+        "table_folder_name": "pipelines/facts/saleops/fct_revenu"
+    },
+    "src_saleops_customer_history": {
+        "table_name": "src_saleops_customer_history",
+        "product_name": "saleops",
+        "type": "source",
+        "dml_ref": "pipelines/sources/saleops/customer_history/sql-scripts/dml.src_saleops_customer_history.sql",
+        "ddl_ref": "pipelines/sources/saleops/customer_history/sql-scripts/ddl.src_saleops_customer_history.sql",
+        "table_folder_name": "pipelines/sources/saleops/customer_history"
+    },
+    "src_saleops_sales_transactions": {
+        "table_name": "src_saleops_sales_transactions",
+        "product_name": "saleops",
+        "type": "source",
+        "dml_ref": "pipelines/sources/saleops/sales_transactions/sql-scripts/dml.src_saleops_sales_transactions.sql",
+        "ddl_ref": "pipelines/sources/saleops/sales_transactions/sql-scripts/ddl.src_saleops_sales_transactions.sql",
+        "table_folder_name": "pipelines/sources/saleops/sales_transactions"
+    }
+}

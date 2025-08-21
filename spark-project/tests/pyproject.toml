@@ -1,5 +1,5 @@
 [project]
-name = "spark-project"
+name = "test-spark-SQLs"
 version = "0.1.0"
 description = "A set of example of Spark SQL to run before migration"
 readme = "README.md"
