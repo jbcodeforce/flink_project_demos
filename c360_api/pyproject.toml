@@ -1,0 +1,40 @@
+[project]
+name = "customer-analytics-c360-api"
+version = "1.0.0"
+description = "FastAPI REST API for Customer 360 analytics supporting Marketing, Product, and Finance use cases"
+readme = "README.md"
+authors = [
+    {name = "Jerome Boyer", email = ""}
+]
+license = {text = "MIT"}
+classifiers = [
+    "Development Status :: 5 - Development/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+]
+keywords = ["fastapi", "customer-analytics", "c360", "spark", "rest-api", "marketing", "finance", "product"]
+requires-python = ">=3.11"
+
+dependencies = [
+    "fastapi>=0.116.2",
+    "pandas>=2.3.2",
+    "pyspark>=4.0.1",
+    "structlog>=25.4.0",
+    "uvicorn>=0.35.0",
+]
+
+
+all = [
+    "customer-analytics-c360-api[dev,test,docs]"
+]
+
+[project.urls]
+Homepage = "https://github.com/jbcodeforce/flink_project_demos"
+Documentation = "https://jbcodeforce.github.io/flink_project_demos"
+Repository = "https://github.com/jbcodeforce/flink_project_demos"
+Issues = "https://github.com/jbcodeforce/flink_project_demos/issues"
+
+[project.scripts]
+c360-api = "main:app"
+c360-setup = "setup:main"
+c360-test = "test_api:main"

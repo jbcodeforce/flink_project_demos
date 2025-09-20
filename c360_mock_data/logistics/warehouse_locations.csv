@@ -1,0 +1,16 @@
+location_id,location_name,location_type,address,city,state,country,capacity_cubic_meters,manager_name
+WH001,Seattle Distribution Center,distribution_center,1000 Commerce Blvd,Seattle,WA,USA,50000,Jennifer Martinez
+WH002,Los Angeles Warehouse,warehouse,2500 Industrial Ave,Los Angeles,CA,USA,35000,Robert Chen
+WH003,Chicago Hub,distribution_center,1500 Logistics Dr,Chicago,IL,USA,45000,Maria Thompson
+WH004,Atlanta Regional Center,distribution_center,3000 Supply Chain Rd,Atlanta,GA,USA,40000,David Rodriguez
+WH005,Dallas Warehouse,warehouse,750 Distribution Way,Dallas,TX,USA,30000,Lisa Anderson
+ST001,Downtown Seattle Store,store,456 Pike St,Seattle,WA,USA,500,Sarah Johnson
+ST002,Portland Main Store,store,789 Broadway Ave,Portland,OR,USA,600,Michael Davis
+ST003,San Francisco Flagship,store,123 Market St,San Francisco,CA,USA,800,Emily Wilson
+ST004,Los Angeles West Store,store,321 Santa Monica Blvd,Los Angeles,CA,USA,550,James Brown
+ST005,Denver Store,store,654 16th Street Mall,Denver,CO,USA,450,Amanda Miller
+ST006,Austin Store,store,987 Congress Ave,Austin,TX,USA,400,Christopher Lee
+ST007,Miami Beach Store,store,147 Ocean Drive,Miami,FL,USA,350,Nicole Garcia
+ST008,Chicago Downtown,store,258 State St,Chicago,IL,USA,700,Daniel White
+ST009,Boston Commons Store,store,369 Newbury St,Boston,MA,USA,520,Lisa Taylor
+ST010,Phoenix Store,store,741 Central Ave,Phoenix,AZ,USA,480,Kevin Jones

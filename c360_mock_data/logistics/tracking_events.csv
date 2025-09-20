@@ -1,0 +1,31 @@
+event_id,shipment_id,event_timestamp,event_type,location,description,carrier_status
+EVT001,SHP001,2024-05-16 08:30:00,picked_up,Seattle WA,Package picked up from origin,IP
+EVT002,SHP001,2024-05-16 14:20:00,in_transit,Seattle WA,Departed from origin facility,DP
+EVT003,SHP001,2024-05-18 09:15:00,in_transit,Portland OR,Arrived at sort facility,AR
+EVT004,SHP001,2024-05-18 16:45:00,in_transit,Portland OR,Departed from sort facility,DP
+EVT005,SHP001,2024-05-19 10:30:00,out_for_delivery,Seattle WA,Out for delivery,OFD
+EVT006,SHP001,2024-05-19 15:22:00,delivered,Seattle WA,Package delivered,DL
+EVT007,SHP002,2024-05-17 09:45:00,picked_up,Portland OR,Package picked up from store,IP
+EVT008,SHP002,2024-05-17 13:20:00,in_transit,Portland OR,Departed from origin,DP
+EVT009,SHP002,2024-05-18 07:30:00,out_for_delivery,Portland OR,Out for delivery,OFD
+EVT010,SHP002,2024-05-18 11:15:00,delivered,Portland OR,Package delivered,DL
+EVT011,SHP003,2024-05-18 10:15:00,picked_up,Seattle WA,Package picked up from warehouse,IP
+EVT012,SHP003,2024-05-18 15:30:00,in_transit,Seattle WA,Departed from origin facility,DP
+EVT013,SHP003,2024-05-20 08:45:00,in_transit,Oakland CA,Arrived at sort facility,AR
+EVT014,SHP003,2024-05-20 14:20:00,in_transit,San Francisco CA,Departed from sort facility,DP
+EVT015,SHP003,2024-05-21 09:10:00,out_for_delivery,San Francisco CA,Out for delivery,OFD
+EVT016,SHP003,2024-05-21 13:45:00,delivered,San Francisco CA,Package delivered,DL
+EVT017,SHP004,2024-05-19 11:30:00,picked_up,Seattle WA,Package picked up from warehouse,IP
+EVT018,SHP004,2024-05-19 18:45:00,in_transit,Seattle WA,Departed from origin,DP
+EVT019,SHP004,2024-05-20 06:20:00,in_transit,Los Angeles CA,Arrived at destination facility,AR
+EVT020,SHP004,2024-05-20 08:15:00,out_for_delivery,Los Angeles CA,Out for delivery,OFD
+EVT021,SHP004,2024-05-20 12:30:00,delivered,Los Angeles CA,Package delivered - overnight service,DL
+EVT022,SHP005,2024-05-20 12:00:00,picked_up,Denver CO,Package picked up from store,IP
+EVT023,SHP005,2024-05-20 16:30:00,in_transit,Denver CO,Departed from origin,DP
+EVT024,SHP005,2024-05-22 10:45:00,in_transit,Denver CO,Processing at sort facility,IP
+EVT025,SHP005,2024-05-22 14:20:00,in_transit,Denver CO,Departed from sort facility,DP
+EVT026,SHP005,2024-05-23 09:30:00,out_for_delivery,Denver CO,Out for delivery,OFD
+EVT027,SHP005,2024-05-23 14:15:00,delivered,Denver CO,Package delivered,DL
+EVT028,SHP006,2024-05-21 09:20:00,picked_up,Seattle WA,Package picked up from warehouse,IP
+EVT029,SHP006,2024-05-21 14:45:00,in_transit,Seattle WA,Departed from origin facility,DP
+EVT030,SHP006,2024-05-23 11:30:00,in_transit,Dallas TX,Arrived at intermediate facility,AR

@@ -1,0 +1,11 @@
+supplier_id,supplier_name,contact_person,email,phone,address,country,payment_terms,quality_rating
+SUP001,TechComponents Inc,John Smith,j.smith@techcomponents.com,+1-555-2001,1234 Industrial Blvd Seattle WA,USA,Net 30,4.5
+SUP002,Global Textiles Ltd,Maria Rodriguez,m.rodriguez@globaltextiles.com,+1-555-2002,5678 Fabric Ave Portland OR,USA,Net 45,4.2
+SUP003,Pacific Manufacturing,David Chen,d.chen@pacificmfg.com,+1-555-2003,9012 Production St San Francisco CA,USA,Net 30,4.7
+SUP004,EuroSupply Group,Emma Johnson,e.johnson@eurosupply.eu,+44-20-5555-2004,456 Commerce Rd London,UK,Net 60,4.3
+SUP005,AsiaLink Trading,Li Wei,l.wei@asialink.com,+86-21-5555-2005,789 Trade Center Shanghai,China,Letter of Credit,4.1
+SUP006,American Leather Co,Robert Brown,r.brown@amerleather.com,+1-555-2006,2345 Tannery Ln Dallas TX,USA,Net 30,4.6
+SUP007,Nordic Electronics,Astrid Hansen,a.hansen@nordicelek.no,+47-22-555-2007,123 Innovation Way Oslo,Norway,Net 45,4.8
+SUP008,Wellness Products Inc,Sarah Wilson,s.wilson@wellnessprod.com,+1-555-2008,6789 Health Dr Denver CO,USA,Net 30,4.4
+SUP009,Creative Games Studio,Michael Taylor,m.taylor@creativegames.com,+1-555-2009,3456 Fun Ave Austin TX,USA,Net 30,4.3
+SUP010,Kitchen Solutions Ltd,Jennifer Davis,j.davis@kitchensol.com,+1-555-2010,7890 Culinary St Chicago IL,USA,Net 45,4.5

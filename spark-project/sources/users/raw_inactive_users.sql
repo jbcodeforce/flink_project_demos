@@ -1,39 +1,3 @@
--- raw_inactive_users: Source table for inactive user data
--- This table contains raw user data for users who haven't logged in recently
-
-CREATE TABLE IF NOT EXISTS raw_inactive_users (
-    user_id BIGINT NOT NULL,
-    username STRING NOT NULL,
-    email STRING NOT NULL,
-    group_id BIGINT NOT NULL,
-    last_login_date DATE NOT NULL,
-    first_name STRING,
-    last_name STRING,
-    registration_date DATE,
-    phone_number STRING,
-    country_code STRING,
-    timezone STRING,
-    preferred_language STRING,
-    account_status STRING,
-    login_count BIGINT,
-    session_duration_minutes INT,
-    last_ip_address STRING,
-    user_agent STRING,
-    created_date TIMESTAMP,
-    updated_date TIMESTAMP
-) 
-USING DELTA
-PARTITIONED BY (DATE_TRUNC('MONTH', last_login_date))
-TBLPROPERTIES (
-    'description' = 'Raw inactive users data from source systems',
-    'quality.expectations.user_id.not_null' = 'true',
-    'quality.expectations.username.not_null' = 'true',
-    'quality.expectations.email.not_null' = 'true',
-    'quality.expectations.email.format' = 'email',
-    'quality.expectations.last_login_date.not_null' = 'true'
-);
-
--- Sample data insertion for testing
 INSERT INTO raw_inactive_users (
     user_id,
     username,
