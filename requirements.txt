@@ -1,0 +1,7 @@
+mkdocs-material
+mkdocs-minify-plugin
+mkdocs-video
+mkdocs-mermaid2-plugin
+mkdocs
+mkdocstrings
+pymdown-extensions
