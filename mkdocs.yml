@@ -45,7 +45,6 @@ plugins:
   - minify:
       minify_html: true
   - mkdocstrings
-  - table-reader
 
 markdown_extensions:
   - abbr
