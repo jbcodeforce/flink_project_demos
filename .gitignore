@@ -9,3 +9,4 @@
 **/.env
 **/.python-version
 **/.uv/
+site/

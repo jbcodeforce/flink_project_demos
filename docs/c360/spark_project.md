@@ -1,8 +1,8 @@
 # Customer 360 Spark Implementation
 
-The Spark implementation for thr C360 uses the Kimball methodology of Sources → Intermediates → Facts → Views.
+The Spark implementation for the Customer 360 analytics uses the Kimball methodology of Sources → Intermediates → Facts → Views.
 
-The demonstration supports a **Customer 360 (C360) data product** for a multi-channel retailer, following the data product architecture outlined in the [design document](./c360_data_models.md). The project implements a complete data pipeline from mock data generation to final consumable analytics views.
+The demonstration supports a **Customer 360 (C360) data product** for a multi-channel retailer, following the data product architecture outlined in the [design document](./data_models.md). The project implements a complete data pipeline from mock data generation to final consumable analytics views.
 
 The spark-sql creates a Hive metastore to contain the persistent view definitions and the database schema metadata.
 
@@ -10,15 +10,16 @@ As an analytical pipeline, the sources are processed at each spark session, on-d
 
 ## Key Features
 
-The implemented pipeline creates a comprehensive customer view for analytics, BI, and ML initiatives. The name is `customer_analytics_c360`.
+The implemented pipeline creates a comprehensive customer view for analytics, BI, and ML initiatives. The name of this data product is `customer_analytics_c360`.
 
 ### Data Pipeline Flow
+
 ```
 CSV Mock Data → Spark Sources → Intermediates → Facts → Data Product View
 ```
 
 
-### Customer Health Scoring
+### Customer Health Scoring 
 
 #### RFM Analysis & Health Scoring
 - **Recency Score** (1-5): Based on last purchase date
@@ -76,9 +77,9 @@ CSV Mock Data → Spark Sources → Intermediates → Facts → Data Product Vie
 
 - Apache Spark 3.x installed with `spark-sql` command available: `brew install apache-spark`
 
-### 📖 Step by step execution
+### Step by step execution
 
-The following commands execute the pipeline step by step so we can understand the processing 
+The following commands execute the pipeline step by step so we can understand the processing logic.
 
 ```bash
 # 0. start the shell in the c360_spark_processing
@@ -119,11 +120,11 @@ source views/customer_analytics_c360.sql;
 SELECT * FROM customer_analytics_c360 LIMIT 10;
 ```
 
-The completion of this pipeline creates a metastore_db folder which is Apache Spark's embedded Hive metastore database.
+The completion of this pipeline creates a `metastore_db` folder which is a Apache Spark's embedded Hive metastore database.
 
 The Hive Metastore stores metadata about databases, tables, views, and schemas. There is also a Derby Database used as the embedded database engine.
 
-### 📊 Expected Results
+### Expected Results
 
 After successful execution, you'll see:
 - **15 customers** processed from mock data
