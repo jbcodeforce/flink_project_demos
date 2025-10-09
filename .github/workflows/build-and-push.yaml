@@ -8,6 +8,10 @@ jobs:
     build:
         name: Deploy docs
         runs-on: ubuntu-latest
+        permissions:
+          contents: write # This is the critical line
+          pages: write # Good practice if deploying to GitHub Pages
+          id-token: write # Often needed for OIDC-based deployment
         steps:
           - name: Checkout master
             uses: actions/checkout@v1
