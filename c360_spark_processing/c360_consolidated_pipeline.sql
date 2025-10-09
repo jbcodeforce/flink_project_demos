@@ -586,3 +586,81 @@ SELECT 'Top 5 Customers by Health Score' as section,
 FROM customer_analytics_c360 
 ORDER BY customer_health_score DESC, total_spent DESC 
 LIMIT 5;
+
+-- =============================================================================
+-- STEP 7: EXPORT RESULTS FOR DASHBOARD
+-- =============================================================================
+
+-- Save the customer analytics view to a single CSV file for the dashboard
+CREATE OR REPLACE TEMPORARY VIEW customer_analytics_export AS
+SELECT * FROM customer_analytics_c360;
+
+-- Drop existing export table if it exists
+DROP TABLE IF EXISTS customer_analytics_c360_export;
+
+-- Create external table to control the output format
+CREATE EXTERNAL TABLE customer_analytics_c360_export (
+    -- Include all columns from the view
+    customer_id STRING,
+    first_name STRING,
+    last_name STRING,
+    email STRING,
+    customer_segment STRING,
+    preferred_channel STRING,
+    generation_segment STRING,
+    age_years DOUBLE,
+    city STRING,
+    state STRING,
+    country STRING,
+    days_since_registration INT,
+    customer_tenure_segment STRING,
+    loyalty_tier STRING,
+    points_balance INT,
+    lifetime_value DOUBLE,
+    value_segment STRING,
+    redemption_rate DOUBLE,
+    total_transactions INT,
+    total_spent DOUBLE,
+    avg_order_value DOUBLE,
+    first_purchase_date TIMESTAMP,
+    last_purchase_date TIMESTAMP,
+    channels_used INT,
+    shopping_days INT,
+    transactions_last_90d INT,
+    spent_last_90d DOUBLE,
+    customer_status STRING,
+    recency_score INT,
+    frequency_score INT,
+    monetary_score INT,
+    customer_health_score DOUBLE,
+    total_app_sessions INT,
+    total_session_minutes INT,
+    avg_session_duration DOUBLE,
+    app_engagement_score DOUBLE,
+    last_app_use_date DATE,
+    unique_device_types INT,
+    total_support_tickets INT,
+    resolved_support_tickets INT,
+    avg_satisfaction DOUBLE,
+    last_ticket_date TIMESTAMP,
+    urgent_support_tickets INT,
+    support_satisfaction_level STRING,
+    is_app_user INT,
+    is_digital_native INT,
+    has_urgent_issues INT,
+    churn_risk_flag INT,
+    satisfaction_risk_flag INT,
+    channel_expansion_opportunity INT,
+    tier_upgrade_opportunity INT,
+    app_adoption_opportunity INT,
+    profile_created_at TIMESTAMP,
+    view_accessed_at TIMESTAMP
+)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ','
+STORED AS TEXTFILE
+LOCATION '/Users/jerome/Documents/Code/flink_project_demos/c360_dashboard/data/export';
+
+-- Export the data
+INSERT OVERWRITE TABLE customer_analytics_c360_export
+SELECT * FROM customer_analytics_export;
