@@ -35,7 +35,7 @@ CREATE OR REPLACE TEMPORARY VIEW src_customers AS ...
 
 ### Creating Persistent Tables
 
-If you want tables that persist in the metastore:
+If you want tables that persist data in the metastore use one of the following options:
 
 #### Option 1: Create Managed Tables
 ```sql
@@ -217,11 +217,12 @@ WHERE customer_id IS NOT NULL
 ```
 
 This will:
-1. ✅ Load all source data from CSV files (`sources/`)
-2. ✅ Create intermediate transformation layers (`intermediates/`)
-3. ✅ Build aggregated fact tables (`facts/`)
-4. ✅ Generate the final Customer 360 data product (`views/`)
-5. ✅ Run validation queries to confirm success
+
+1. Load all source data from CSV files (`sources/`)
+2. Create intermediate transformation layers (`intermediates/`)
+3. Build aggregated fact tables (`facts/`)
+4. Generate the final Customer 360 data product (`views/`)
+5. Run validation queries to confirm success
 
 
 ### Testing Individual Layers

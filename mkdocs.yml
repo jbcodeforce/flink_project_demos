@@ -4,12 +4,11 @@ site_url: https://jeromeboyer.net/flink_project_demos
 copyright: Copyright &copy; 2025 Jerome Boyer
 nav:
   - Introduction: index.md
-  - Design:
-    - Customer 360 Data Model: c360/data_models.md
-  - Implementations:
-    - C360 Spark Project: c360/spark_project.md
-    - Automatic Migration: automatic_migration.md
-    - C360 Flink Project: c360/flink_project.md
+  - Customer 360:
+    - Introduction: c360/index.md
+    - Data Model: c360/data_models.md
+    - Spark Project: c360/spark_project.md
+    - Flink Project: c360/flink_project.md
   - External References:
     - Spark SQL best practices: https://jbcodeforce.github.io/spark-studies/
     - Flink SQL best practices: https://jbcodeforce.github.io/flink-studies/coding/flink-sql/
@@ -30,7 +29,7 @@ theme:
       - search.highlight
       - navigation.instant
       - navigation.instant.progress
-      #- navigation.tabs
+      - navigation.tabs
       - navigation.tabs.sticky
       - navigation.tracking
       - navigation.sections

@@ -1,22 +1,29 @@
 # Flink Project Demonstrations
 
-This project includes one Spark project to illustrate batch processing to build a customer 360 analytic data product. The high level architecture of this demonstration is:
+This git repository includes multiple projects to illustrate shifting from batch processing to data stream processing using Flink, and how to manage data as a product.
+
+1. The first project is a classical customer 360 assessment. The different components are in the customer_360 folder. It starts from one Spark project to illustrate how to implement a customer 360 analytic data product using Apache Spark batch processing, then supports the same semantic with a data streaming processing using Apache Flink. This examples illustrates how to use Agentic solution to automate most of the migration using the [shit_left utilities](https://jbcodeforce.github.io/shift_left_utils)
+1. The project `online_store` illustrates starting from a white page to process online store activities for customer behavior and real-time inventory. This is a fictuous demonstration to build using a set of incremental labs.
+
+## Customer 360 introduction
+
+The high level architecture for  batch processing is presented in the figure below, and use a simplified version of the star schema of the Kimball methodology, to build dimensional models:
 
 ![](./c360/images/spark_process.drawio.png)
 
-From this project we will shift left by moving the batch-based Spark processing to a real-time processing with Kafka and Flink project:
+To shift left by moving the batch-based Spark processing to a real-time processing with Kafka and Flink project, the architecture looks like:
 
 ![](./c360/images/kafka_flink_process.drawio.png)
 
 The project also demonstrates an automatic migration from Spark to Flink using the [shift_left tool](https://jbcodeforce.github.io/shift_left_utils/coding/llm_based_translation/) and agentic AI.
 
-Finally other Flink projects are also includes to demonstrate smaller use cases.
 
-## A data as a product design
+### A data as a product design
+Any data as a product design starts by assessing the domain, the data ownership, the data sources, and consumer of the analytic data products,... We recommend to read [this chapter](https://jbcodeforce.github.io/flink-studies/methodology/data_as_a_product/) to review a methodology to build data as a product.
 
-The specific use case is a multi-channel retailer (bricks-and-mortar stores, e-commerce, mobile app) migrating their analytics platform to an Analytics Lakehouse with real-time processing.
+The specific customer 360 use case is a multi-channel retailer (bricks-and-mortar stores, e-commerce, mobile app) migrating their analytics platform to an Analytics Lakehouse with real-time processing.
 
-The project identifies the key business domains and assigning the following ownership:
+The project identifies the following key business domains and assigning the following ownership:
 
 | Domain	|Data Owner/Team	|Key Data Sources|
 | --- | --- | --- |
@@ -52,7 +59,7 @@ The final curated data is exposed via well-defined, easily consumable interfaces
 
 #### Cross-Domain Consumption for Analytics
 
-Other domains then consume this product to achieve their analytical goals:
+Other domains may consume the data as a product to achieve their analytical goals:
 
 | Consuming Domain | Analytical Goal |Data Product Consumed
 | --- | --- | --- |
@@ -60,15 +67,13 @@ Other domains then consume this product to achieve their analytical goals:
 | **Product** |	Analyze which customer segments are buying a new line of shoes. | customer.analytics.Customer360Profile joined with the Sales Domain's sales.transaction.AggregatedDailySales product.|
 | **Finance** |	Calculate the Customer Lifetime Value (CLV) |	Queries the customer.analytics.Customer360Profile via the SQL endpoint. |
 
-[To read more about moving from DDD to Data as a product methodology see this chapter](https://jbcodeforce.github.io/flink-studies/methodology/data_as_a_product/).
+[To read more about moving from Domain Driven Design to Data as a product methodology see this chapter](https://jbcodeforce.github.io/flink-studies/methodology/data_as_a_product/).
 
-## Flink Project Demos - Folder Structure
+---
 
-* **c360_*** are a set of projects to demonstrate how to define a data as a product in Spark and its equivalent for real time processing in Flink SQL.
-    * **c360_spark_processing** a batch implementation using the `star schema` and Kimball method to organize facts, and dimensions. The project [description is here.](./c360/spark_project.md). This project was created using `shift_left project init c360_spark_processing` command.
-    * **c360_mock_data**: a set of CSV files to create synthetic data.
-    * **c360_api**: A FastAPI-based REST API that exposes Customer 360 analytics for Marketing, Product, and Finance teams built on top of Spark data pipeline.
-    * **c360_flink_processing**: Building the same data as a product with Flink processing.
+## Other projects
+TBC
+
 * **flink_data_products** includes a set of small data as a product examples implemented using Flink SQL. They are used to demonstrate pipeline management with [shift_left tool](https://jbcodeforce.github.io/shift_left_utils/pipeline_mgr/) and simplest use cases.
 
     * the saleops is a simple example of Kimball structure for a star schema about revenu computation in the context of sales of products within different channels (See the [readme](https://github.com/jbcodeforce/flink_project_demos/tree/main/flink_data_products/pipelines/facts/saleops/fct_revenu/readme.md) for details). 

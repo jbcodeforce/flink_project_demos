@@ -21,6 +21,8 @@ CSV Mock Data → Spark Sources → Intermediates → Facts → Data Product Vie
 
 ### Customer Health Scoring 
 
+The following KPIs may be defined.
+
 #### RFM Analysis & Health Scoring
 - **Recency Score** (1-5): Based on last purchase date
 - **Frequency Score** (1-5): Based on transaction count  
@@ -71,11 +73,12 @@ CSV Mock Data → Spark Sources → Intermediates → Facts → Data Product Vie
 ### Views
 - `customer_analytics_c360.sql` - Final data product for consumption
 
-## 🎉 Demonstration
+## Demonstration
 
 ### Prerequisites
 
-- Apache Spark 3.x installed with `spark-sql` command available: `brew install apache-spark`
+* Apache Spark 3.x installed with `spark-sql` command available: `brew install apache-spark`
+* Mock CSV data in `../c360_mock_data/` directory
 
 ### Step by step execution
 
@@ -127,6 +130,7 @@ The Hive Metastore stores metadata about databases, tables, views, and schemas. 
 ### Expected Results
 
 After successful execution, you'll see:
+
 - **15 customers** processed from mock data
 - **Pipeline Summary** showing customer distribution
 - **Top 5 customers** by health score
@@ -155,6 +159,8 @@ spark-sql -f c360_consolidated_pipeline.sql
 
 ## Usage Examples
 
+From this customer analytics data product it is possible to extract some specific analytic metrics:
+
 ### Sample Customer 360 Profile
 
 ```sql
@@ -174,7 +180,7 @@ FROM customer_analytics_c360;
 
 ### Marketing Use Cases
 ```sql
--- Identify churn risk customers for retention campaigns
+-- Identify churn risk customers 
 SELECT customer_id, first_name, last_name, customer_health_score
 FROM customer_analytics_c360 
 WHERE churn_risk_flag = 1 
