@@ -1,0 +1,30 @@
+INSERT INTO support_ticket_raw (
+    ticket_id,
+    customer_id,
+    created_date,
+    resolved_date,
+    category,
+    priority,
+    status,
+    channel,
+    satisfaction_score
+)
+VALUES
+    ('TKT001', 'CUST001', TIMESTAMP '2024-01-15 09:30:00', TIMESTAMP '2024-01-15 14:22:00', 'billing', 'medium', 'resolved', 'email', 4),
+    ('TKT002', 'CUST003', TIMESTAMP '2024-01-18 11:15:00', TIMESTAMP '2024-01-19 10:30:00', 'product', 'high', 'resolved', 'phone', 5),
+    ('TKT003', 'CUST005', TIMESTAMP '2024-02-02 14:45:00', TIMESTAMP '2024-02-02 16:20:00', 'shipping', 'low', 'resolved', 'chat', 3),
+    ('TKT004', 'CUST007', TIMESTAMP '2024-02-10 10:20:00', TIMESTAMP '2024-02-12 09:45:00', 'product', 'medium', 'resolved', 'store', 4),
+    ('TKT005', 'CUST002', TIMESTAMP '2024-02-15 16:30:00', TIMESTAMP '2024-02-16 11:15:00', 'billing', 'urgent', 'resolved', 'phone', 2),
+    ('TKT006', 'CUST009', TIMESTAMP '2024-03-01 08:45:00', TIMESTAMP '2024-03-01 12:30:00', 'shipping', 'medium', 'resolved', 'email', 5),
+    ('TKT007', 'CUST004', TIMESTAMP '2024-03-10 13:20:00', TIMESTAMP '2024-03-11 15:45:00', 'account', 'low', 'resolved', 'chat', 4),
+    ('TKT008', 'CUST011', TIMESTAMP '2024-03-15 09:10:00', TIMESTAMP '2024-03-17 14:20:00', 'product', 'high', 'resolved', 'store', 3),
+    ('TKT009', 'CUST006', TIMESTAMP '2024-04-02 15:40:00', TIMESTAMP '2024-04-02 17:15:00', 'billing', 'medium', 'resolved', 'email', 4),
+    ('TKT010', 'CUST013', TIMESTAMP '2024-04-08 11:30:00', TIMESTAMP '2024-04-09 10:45:00', 'shipping', 'low', 'resolved', 'phone', 5),
+    ('TKT011', 'CUST008', TIMESTAMP '2024-04-20 14:15:00', TIMESTAMP '2024-04-22 09:30:00', 'account', 'medium', 'resolved', 'chat', 3),
+    ('TKT012', 'CUST015', TIMESTAMP '2024-05-05 10:25:00', TIMESTAMP '2024-05-05 16:40:00', 'product', 'urgent', 'resolved', 'store', 4),
+    ('TKT013', 'CUST010', TIMESTAMP '2024-05-12 12:45:00', TIMESTAMP '2024-05-13 11:20:00', 'billing', 'low', 'resolved', 'email', 5),
+    ('TKT014', 'CUST012', TIMESTAMP '2024-05-18 09:55:00', TIMESTAMP '2024-05-20 14:10:00', 'shipping', 'medium', 'resolved', 'phone', 2),
+    ('TKT015', 'CUST014', TIMESTAMP '2024-06-01 16:20:00',  TO_TIMESTAMP(FROM_UNIXTIME(0)), 'technical', 'high', 'in_progress', 'chat', 0),
+    ('TKT016', 'CUST001', TIMESTAMP '2024-06-10 13:10:00',  TO_TIMESTAMP(FROM_UNIXTIME(0)), 'account', 'medium', 'open', 'email', 0),
+    ('TKT016', 'CUST001', TIMESTAMP '2024-06-10 13:10:00',  TO_TIMESTAMP(FROM_UNIXTIME(0)), 'account', 'medium', 'open', 'email', 0),
+    ('TKT017', 'CUST003', TIMESTAMP '2024-06-15 11:45:00', TIMESTAMP '2024-06-16 09:30:00', 'product', 'low', 'resolved', 'store', 4);

@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS c360_fct_customer_360_profile (
+CREATE TABLE IF NOT EXISTS int_c360_customer_transactions (
 
   -- put here column definitions
   PRIMARY KEY(default_key) NOT ENFORCED

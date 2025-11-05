@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS src_c360_transactions (
+    transaction_id STRING,
+    customer_id STRING,
+    transaction_date TIMESTAMP(3),
+    channel STRING,
+    store_id STRING,
+    payment_method STRING,
+    subtotal DECIMAL(10,2),
+    tax_amount DECIMAL(10,2),
+    discount_amount DECIMAL(10,2),
+    total_amount DECIMAL(10,2),
+    currency STRING,
+    status STRING,
+    transaction_date_only DATE,
+    transaction_hour BIGINT,
+    day_of_week BIGINT,
+    transaction_month BIGINT,
+    transaction_quarter BIGINT,
+    transaction_year BIGINT,
+    channel_group STRING,
+    has_discount INT,
+    discount_rate DECIMAL(10,2),
+    order_size_category STRING,
+  PRIMARY KEY(transaction_id) NOT ENFORCED
+) DISTRIBUTED BY HASH(transaction_id) INTO 1 BUCKETS
+WITH (
+  'changelog.mode' = 'upsert',
+  'key.avro-registry.schema-context' = '.flink-dev',
+  'value.avro-registry.schema-context' = '.flink-dev',
+  'key.format' = 'avro-registry',
+  'value.format' = 'avro-registry',
+  'kafka.retention.time' = '0',
+  'kafka.producer.compression.type' = 'snappy',
+  'scan.bounded.mode' = 'unbounded',
+  'scan.startup.mode' = 'earliest-offset',
+  'value.fields-include' = 'all'
+);

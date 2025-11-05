@@ -1,4 +1,4 @@
-# Flink Project Demonstrations
+# [Flink Project Demonstrations](https://jbcodeforce.github.io/flink_project_demos/)
 
 This project includes a data as a product end to end demonstration from design to deployment to illustrate how to move from batch processing to real-time processing, shifting left to the pipeline architecture.
 

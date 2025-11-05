@@ -33,7 +33,7 @@ views/            → Final products
 
 ### Add table foundations
 
-* Create the fct_customer_360_profile
+* Create the **fct_customer_360_profile**
     ```sh
     shift_left table init fct_customer_360_profile $PIPELINES/facts --product-name c360
     ```
@@ -50,8 +50,70 @@ views/            → Final products
             └── tracking.md
     ```
 
+    The DDL is created by looking as the expected structure in the corresponding Spark fct_customer_360_profile.sql
+
+The fact needs source tables to get the data from raw topics.
+
+* Create  `src_loyalty_program` with the command:
+    ```sql
+    shift_left table init src_loyalty_program $PIPELINES/sources --product-name c360
+    ```
+
+* Other sources to create
+    ```sh
+    shift_left table init src_customers  $PIPELINES/sources --product-name c360
+    shift_left table init src_app_usage  $PIPELINES/sources --product-name c360
+    shift_left table init src_support_ticket  $PIPELINES/sources --product-name c360
+    shift_left table init src_tx_items  $PIPELINES/sources --product-name c360
+    ```
+* Each dml may implement the deduplication pattern.
+    ```sql
+    insert into ..
+    select 
+    ...
+    FROM (
+        SELECT *,
+            ROW_NUMBER() OVER (
+                PARTITION BY ticket_id 
+                ORDER BY `$rowtime` DESC
+            ) AS row_num
+        FROM support_ticket_raw
+    ) WHERE row_num = 1
+    ```
+* for each sources add the creation of the raw tables, and the insert statements to get some values into the raw kafka topics. Use the following prompt to the AI code assistant:
+    ```txt
+    create a flink sql to insert the same records from the @support_tickets.csv into a support_ticket_raw
+    ```
+### Add an intermediate table for the transaction
+
+```sh
+shift_left table init int_customer_transactions  $PIPELINES/intermediates --product-name c360
+```
+
+which leads to create a new src and raw
+```sh
+shift_left table init src_tx_items  $PIPELINES/sources --product-name c360
+shift_left table init src_transactions  $PIPELINES/sources --product-name c360 
+shift_left table init src_products  $PIPELINES/sources --product-name c360
+```
+
+One of the prompt is:
+```
+create a flink sql to insert the same records from the @transaction_items.csv into insert transaction_items_raw
+```
+
 ## Shifting left from batch to real-time
 
-As illustrated by the Spark project, the analytical data prduct is accessible after each batch pipeline execution, and even a REST API needs to run the spark job, and then cache the result for a certain time.
+As illustrated by the Spark project, the analytical data prduct is accessible after each batch pipeline execution, and even a REST API needs to run the spark job, and then cache the results for a certain time to deliver the data product via its interface.
 
-The goal is to move to close to real-time processing.
+As introduced by [the Spark to Flink SQL migration section](https://jbcodeforce.github.io/shift_left_utils/coding/llm_based_translation/#spark-sql-to-flink-sql) it is possible to migrate with a local LLM.
+
+* Start Ollama server
+    ```
+    ollama serve
+    ```
+
+* Try a migration
+    ```sh
+    shift_left table migrate fct_customer_360_profile $SRC_FOLDER/facts/fct_customer_360_profile.sql $STAGING --source-type spark
+    ```
