@@ -14,6 +14,11 @@ CREATE TABLE IF NOT EXISTS src_c360_customers (
     state STRING,
     zip_code STRING,
     country STRING,
+    age_years BIGINT,
+    days_since_registration BIGINT,
+    generation_segment STRING,
+    missing_email_flag BIGINT,
+    missing_phone_flag BIGINT,
   PRIMARY KEY(customer_id) NOT ENFORCED
 ) DISTRIBUTED BY HASH(customer_id) INTO 1 BUCKETS
 WITH (

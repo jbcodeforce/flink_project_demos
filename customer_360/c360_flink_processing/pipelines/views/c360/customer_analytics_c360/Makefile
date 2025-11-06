@@ -1,7 +1,7 @@
 include ../../../common.mk
 
-# --- src_c360_customers
-TABLE_NAME=src_c360_customers
+# --- customer_analytics_c360
+TABLE_NAME=customer_analytics_c360
 SCRIPT_PRE_KEBAB=dev-usw2-c360
 SCRIPT_POST_KEBAB=$(subst _,-,$(TABLE_NAME))
 
@@ -12,17 +12,8 @@ DML_STATEMENT=$(SCRIPT_PRE_KEBAB)-dml-$(SCRIPT_POST_KEBAB)
 DML_SCRIPT=./sql-scripts/dml.$(TABLE_NAME).sql
 DML_TESTS_SCRIPT=./tests/dml.$(TABLE_NAME).sql
 
-# Test/Raw table variables
-TEST_DDL_STATEMENT=$(SCRIPT_PRE_KEBAB)-ddl-customers-raw
-TEST_DDL_SCRIPT=./tests/ddl.customers_raw.sql
-TEST_INSERT_STATEMENT=$(SCRIPT_PRE_KEBAB)-insert-customers-raw
-TEST_INSERT_SCRIPT=./tests/insert_customers_raw.sql
-TEST_DROP_STATEMENT=$(SCRIPT_PRE_KEBAB)-drop-customers-raw
-
 # --- Entry point
-create_src_c360_customers: create_flink_ddl  create_flink_dml
-
-deploy: create_src_c360_customers
+create_customer_analytics_c360: create_flink_ddl  create_flink_dml
 
 
 # --- Topic used as source
@@ -72,33 +63,3 @@ delete_schemas:
 delete_flink_statements: delete_flink_ddl delete_flink_dml
 
 delete_data: delete_schemas
-
-# --- Test/Raw Table Management
-create_test_ddl:
-	$(call create_flink_statement, $(TEST_DDL_STATEMENT), $(TEST_DDL_SCRIPT))
-	$(call delete_flink_statement, $(TEST_DDL_STATEMENT))
-
-describe_test_ddl:
-	$(call describe_flink_statement, $(TEST_DDL_STATEMENT))
-
-delete_test_ddl:
-	$(call delete_flink_statement, $(TEST_DDL_STATEMENT))
-
-drop_test_table:
-	$(call drop_table, $(TEST_DROP_STATEMENT), customers_raw)
-	$(call delete_flink_statement, $(TEST_DROP_STATEMENT))
-
-create_test_insert:
-	$(call create_flink_statement, $(TEST_INSERT_STATEMENT), $(TEST_INSERT_SCRIPT))
-
-describe_test_insert:
-	$(call describe_flink_statement, $(TEST_INSERT_STATEMENT))
-
-delete_test_insert:
-	$(call delete_flink_statement, $(TEST_INSERT_STATEMENT))
-
-# Deploy test environment (raw table + insert data)
-deploy_tests: create_test_ddl create_test_insert
-
-# Clean up test environment
-clean_tests: delete_test_insert delete_test_ddl

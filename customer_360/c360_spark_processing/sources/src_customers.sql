@@ -71,8 +71,7 @@ SELECT
   CASE
   WHEN phone IS NULL
   OR phone = '' THEN 1
-  ELSE 0 END AS missing_phone_flag,
-  data_quality_score
+  ELSE 0 END AS missing_phone_flag
 FROM
   ranked_customers
 WHERE

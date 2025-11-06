@@ -1,8 +1,36 @@
 CREATE TABLE IF NOT EXISTS int_c360_customer_transactions (
-
+  customer_id STRING,
+  first_name STRING,
+  last_name STRING,
+  email STRING,
+  customer_segment STRING,
+  preferred_channel STRING,
+  generation_segment STRING,
+  age_years BIGINT,
+  days_since_registration BIGINT,
+  transaction_id STRING,
+  transaction_date TIMESTAMP(3), 
+  channel STRING,
+  channel_group STRING,
+  total_amount DECIMAL(10,2),
+  discount_amount DECIMAL(10,2),
+  order_size_category STRING,
+  items_purchased BIGINT,
+  total_quantity BIGINT,
+  avg_item_price DECIMAL(10,2),
+  unique_categories BIGINT,
+  unique_brands BIGINT,
+  purchased_category_groups MULTISET<STRING>,
+  purchased_brands MULTISET<STRING>,
+  transaction_hour BIGINT,
+  day_of_week BIGINT,
+  transaction_month BIGINT,
+  transaction_quarter BIGINT,
+  transaction_year BIGINT,
+  used_preferred_channel INT,
   -- put here column definitions
-  PRIMARY KEY(default_key) NOT ENFORCED
-) DISTRIBUTED BY HASH(default_key) INTO 1 BUCKETS
+  PRIMARY KEY(customer_id) NOT ENFORCED
+) DISTRIBUTED BY HASH(customer_id) INTO 1 BUCKETS
 WITH (
   'changelog.mode' = 'upsert',
   'key.avro-registry.schema-context' = '.flink-dev',

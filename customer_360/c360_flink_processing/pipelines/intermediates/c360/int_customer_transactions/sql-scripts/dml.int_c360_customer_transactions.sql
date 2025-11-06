@@ -32,10 +32,10 @@ transaction_summary AS (
         COUNT(DISTINCT p.category) as unique_categories,
         COUNT(DISTINCT p.brand) as unique_brands,
         -- Category preferences
-        COLLECT_LIST(p.category_group) as purchased_category_groups,
-        COLLECT_LIST(p.brand) as purchased_brands
+        COLLECT(p.category_group) as purchased_category_groups,
+        COLLECT(p.brand) as purchased_brands
     FROM src_c360_transactions t
-    INNER JOIN src_c360_tx_items ti ON t.transaction_id = ti.transaction_id  
+    INNER JOIN transaction_items ti ON t.transaction_id = ti.transaction_id  
     INNER JOIN src_c360_products p ON ti.product_id = p.product_id
     GROUP BY 
         t.transaction_id, t.customer_id, t.transaction_date, t.channel, 
@@ -77,5 +77,5 @@ SELECT
     ts.transaction_year,
     -- Channel alignment analysis
     CASE WHEN c.preferred_channel = ts.channel THEN 1 ELSE 0 END as used_preferred_channel
-FROM src_customers c
+FROM src_c360_customers c
 INNER JOIN transaction_summary ts ON c.customer_id = ts.customer_id;

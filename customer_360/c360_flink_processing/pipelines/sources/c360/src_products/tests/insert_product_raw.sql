@@ -1,5 +1,5 @@
 -- DML: Insert records from products.csv
-INSERT INTO product_raw VALUES
+INSERT INTO products_raw VALUES
 ('PRD001', 'Wireless Bluetooth Headphones', 'Electronics', 'Audio', 'SoundTech', 149.99, 89.99, 0.350, '20x18x8 cm', 'Black', 'One Size', DATE '2023-01-15', 'active'),
 ('PRD002', 'Premium Running Shoes', 'Footwear', 'Athletic', 'RunFast', 149.99, 75.00, 0.800, 'N/A', 'Blue', '10', DATE '2023-02-01', 'active'),
 ('PRD003', 'Cotton T-Shirt Classic', 'Apparel', 'Shirts', 'BasicWear', 29.99, 12.50, 0.200, 'N/A', 'White', 'M', DATE '2023-01-20', 'active'),

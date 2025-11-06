@@ -90,7 +90,7 @@ The fact needs source tables to get the data from raw topics.
 shift_left table init int_customer_transactions  $PIPELINES/intermediates --product-name c360
 ```
 
-which leads to create a new src and raw
+which leads to create new srcs and raws
 ```sh
 shift_left table init src_tx_items  $PIPELINES/sources --product-name c360
 shift_left table init src_transactions  $PIPELINES/sources --product-name c360 
@@ -100,6 +100,82 @@ shift_left table init src_products  $PIPELINES/sources --product-name c360
 One of the prompt is:
 ```
 create a flink sql to insert the same records from the @transaction_items.csv into insert transaction_items_raw
+```
+
+At that stage the files and folders constructed are (removing Makefile and tracking.md):
+```
+├── dimensions
+├── facts
+│   └── c360
+│       └── fct_customer_360_profile
+│           ├── sql-scripts
+│           │   ├── ddl.c360_fct_customer_profile.sql
+│           │   └── dml.c360_fct_customer_profile.sql
+│           ├── tests
+├── intermediates
+│   └── c360
+│       └── int_customer_transactions
+│           ├── sql-scripts
+│           │   ├── ddl.int_c360_customer_transactions.sql
+│           │   └── dml.int_c360_customer_transactions.sql
+│           ├── tests
+├── sources
+│   └── c360
+│       ├── src_app_usage
+│       │   ├── sql-scripts
+│       │   │   ├── ddl.src_c360_app_usage.sql
+│       │   │   └── dml.src_c360_app_usage.sql
+│       │   ├── tests
+│       │   │   ├── ddl.app_usage_raw.sql
+│       │   │   └── insert_app_usage_raw.sql
+│       ├── src_customers
+│       │   ├── sql-scripts
+│       │   │   ├── ddl.src_c360_customers.sql
+│       │   │   └── dml.src_c360_customers.sql
+│       │   ├── tests
+│       │   │   ├── ddl.customers_raw.sql
+│       │   │   └── insert_customers_raw.sql
+│       ├── src_loyalty_program
+│       │   ├── sql-scripts
+│       │   │   ├── ddl.src_c360_loyalty_program.sql
+│       │   │   └── dml.src_c360_loyalty_program.sql
+│       │   ├── tests
+│       │   │   ├── ddl.loyalty_program_raw.sql
+│       │   │   └── insert_loyalty_program_raw.sql
+│       ├── src_products
+│       │   ├── sql-scripts
+│       │   │   ├── ddl.src_c360_products.sql
+│       │   │   └── dml.src_c360_products.sql
+│       │   ├── tests
+│       │   │   ├── ddl.product_raw.sql
+│       │   │   └── insert_product_raw.sql
+│       ├── src_support_ticket
+│       │   ├── sql-scripts
+│       │   │   ├── ddl.src_c360_support_ticket.sql
+│       │   │   └── dml.src_c360_support_ticket.sql
+│       │   ├── tests
+│       │   │   ├── ddl.support_ticket_raw.sql
+│       │   │   └── insert_support_ticket_raw.sql
+│       ├── src_transactions
+│       │   ├── sql-scripts
+│       │   │   ├── ddl.src_c360_transactions.sql
+│       │   │   └── dml.src_c360_transactions.sql
+│       │   ├── tests
+│       │   │   ├── ddl.tx_raw.sql
+│       │   │   └── insert_tx_raw.sql
+│       └── src_tx_items
+│           ├── sql-scripts
+│           │   ├── ddl.src_c360_tx_items.sql
+│           │   └── dml.src_c360_tx_items.sql
+│           ├── tests
+│           │   ├── ddl.tx_items_raw.sql
+│           │   └── insert_tx_items_raw.sql
+```
+
+### Finaly build the views as gold layer
+
+```sh
+shift_left table init customer_analytics_c360 $PIPELINES/views --product-name c360
 ```
 
 ## Shifting left from batch to real-time

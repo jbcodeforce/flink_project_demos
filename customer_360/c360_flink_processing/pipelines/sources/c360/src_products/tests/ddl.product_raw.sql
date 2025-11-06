@@ -1,4 +1,4 @@
-CREATE TABLE product_raw (
+CREATE TABLE products_raw (
     product_id STRING,
     product_name STRING,
     category STRING,

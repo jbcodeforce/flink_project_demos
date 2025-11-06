@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS c360_fct_customer_profile (
+CREATE TABLE IF NOT EXISTS customer_analytics_c360 (
     customer_id STRING,
     first_name STRING,
     last_name STRING,
@@ -7,20 +7,19 @@ CREATE TABLE IF NOT EXISTS c360_fct_customer_profile (
     preferred_channel STRING,
     generation_segment STRING,
     age_years BIGINT,
-    days_since_registration BIGINT,
     city STRING,
     state STRING,
     country STRING,
-    
-    -- Loyalty program data
+    -- Account information
+    days_since_registration BIGINT,
+    customer_tenure_segment STRING,
+    -- Loyalty program
     loyalty_tier STRING,
     points_balance INTEGER,
     lifetime_value DECIMAL(10,2),
-    tier_rank INTEGER,
     value_segment STRING,
     redemption_rate DECIMAL(10,2),
-    days_in_current_tier BIGINT,
-    -- Transaction metrics
+    -- Purchase behavior
     total_transactions BIGINT,
     total_spent DECIMAL(10,2),
     avg_order_value DECIMAL(10,2),
@@ -28,31 +27,39 @@ CREATE TABLE IF NOT EXISTS c360_fct_customer_profile (
     last_purchase_date TIMESTAMP(3),
     channels_used BIGINT,
     shopping_days BIGINT,
-    preferred_channel_usage INTEGER,
     transactions_last_90d BIGINT,
     spent_last_90d DECIMAL(10,2),
-    -- Support metrics
+    -- Customer health metrics
+    customer_status STRING, 
+    recency_score INTEGER,
+    frequency_score INTEGER,
+    monetary_score INTEGER,
+    customer_health_score DECIMAL(10,2),
+    -- Engagement metrics
+    total_app_sessions BIGINT,
+    total_session_minutes INTEGER,
+    avg_session_duration INTEGER,
+    app_engagement_score DECIMAL(10,2),
+    last_app_use_date DATE,
+    unique_device_types BIGINT,
+    -- Support interaction
     total_support_tickets BIGINT,
     resolved_support_tickets BIGINT,
     avg_satisfaction DECIMAL(10,2),
     last_ticket_date TIMESTAMP(3),
     urgent_support_tickets BIGINT,
-    -- App usage metrics
-    total_app_sessions BIGINT,
-    total_session_minutes INTEGER,
-    avg_session_duration INTEGER,
-    total_pages_viewed INTEGER,
-    total_actions_taken INTEGER,
-    last_app_use_date DATE,
-    unique_device_types BIGINT,
-    app_engagement_score DECIMAL(10,2),
-     -- Calculated customer health metrics
-    customer_status STRING, 
-     -- RFM-like scoring
-    recency_score INTEGER,
-    frequency_score INTEGER,
-    monetary_score INTEGER,
-    profile_created_at TIMESTAMP(3),
+    support_satisfaction_level STRING,
+    is_app_user BIGINT,
+    is_digital_native BIGINT,
+    has_urgent_issues BIGINT,
+    churn_risk_flag BIGINT,
+    satisfaction_risk_flag BIGINT,
+    channel_expansion_opportunity BIGINT,
+    tier_upgrade_opportunity BIGINT,
+    app_adoption_opportunity BIGINT,
+  -- put here column definitions
+  profile_created_at TIMESTAMP(3),
+  view_created_at TIMESTAMP_LTZ(3),
   PRIMARY KEY(customer_id) NOT ENFORCED
 ) DISTRIBUTED BY HASH(customer_id) INTO 1 BUCKETS
 WITH (

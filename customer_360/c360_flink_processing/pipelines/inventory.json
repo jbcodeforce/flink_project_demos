@@ -1,1 +1,74 @@
-{}
+{
+    "c360_fct_customer_profile": {
+        "table_name": "c360_fct_customer_profile",
+        "product_name": "c360",
+        "type": "fact",
+        "dml_ref": "pipelines/facts/c360/fct_customer_360_profile/sql-scripts/dml.c360_fct_customer_profile.sql",
+        "ddl_ref": "pipelines/facts/c360/fct_customer_360_profile/sql-scripts/ddl.c360_fct_customer_profile.sql",
+        "table_folder_name": "pipelines/facts/c360/fct_customer_360_profile"
+    },
+    "int_c360_customer_transactions": {
+        "table_name": "int_c360_customer_transactions",
+        "product_name": "c360",
+        "type": "intermediate",
+        "dml_ref": "pipelines/intermediates/c360/int_customer_transactions/sql-scripts/dml.int_c360_customer_transactions.sql",
+        "ddl_ref": "pipelines/intermediates/c360/int_customer_transactions/sql-scripts/ddl.int_c360_customer_transactions.sql",
+        "table_folder_name": "pipelines/intermediates/c360/int_customer_transactions"
+    },
+    "src_c360_app_usage": {
+        "table_name": "src_c360_app_usage",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_app_usage/sql-scripts/dml.src_c360_app_usage.sql",
+        "ddl_ref": "pipelines/sources/c360/src_app_usage/sql-scripts/ddl.src_c360_app_usage.sql",
+        "table_folder_name": "pipelines/sources/c360/src_app_usage"
+    },
+    "src_c360_customers": {
+        "table_name": "src_c360_customers",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_customers/sql-scripts/dml.src_c360_customers.sql",
+        "ddl_ref": "pipelines/sources/c360/src_customers/sql-scripts/ddl.src_c360_customers.sql",
+        "table_folder_name": "pipelines/sources/c360/src_customers"
+    },
+    "src_c360_loyalty_program": {
+        "table_name": "src_c360_loyalty_program",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_loyalty_program/sql-scripts/dml.src_c360_loyalty_program.sql",
+        "ddl_ref": "pipelines/sources/c360/src_loyalty_program/sql-scripts/ddl.src_c360_loyalty_program.sql",
+        "table_folder_name": "pipelines/sources/c360/src_loyalty_program"
+    },
+    "src_c360_products": {
+        "table_name": "src_c360_products",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_products/sql-scripts/dml.src_c360_products.sql",
+        "ddl_ref": "pipelines/sources/c360/src_products/sql-scripts/ddl.src_c360_products.sql",
+        "table_folder_name": "pipelines/sources/c360/src_products"
+    },
+    "src_c360_support_ticket": {
+        "table_name": "src_c360_support_ticket",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_support_ticket/sql-scripts/dml.src_c360_support_ticket.sql",
+        "ddl_ref": "pipelines/sources/c360/src_support_ticket/sql-scripts/ddl.src_c360_support_ticket.sql",
+        "table_folder_name": "pipelines/sources/c360/src_support_ticket"
+    },
+    "src_c360_transactions": {
+        "table_name": "src_c360_transactions",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_transactions/sql-scripts/dml.src_c360_transactions.sql",
+        "ddl_ref": "pipelines/sources/c360/src_transactions/sql-scripts/ddl.src_c360_transactions.sql",
+        "table_folder_name": "pipelines/sources/c360/src_transactions"
+    },
+    "src_c360_tx_items": {
+        "table_name": "src_c360_tx_items",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/dml.src_c360_tx_items.sql",
+        "ddl_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/ddl.src_c360_tx_items.sql",
+        "table_folder_name": "pipelines/sources/c360/src_tx_items"
+    }
+}
