@@ -9,9 +9,9 @@ nav:
     - Data Model: c360/data_models.md
     - Spark Project: c360/spark_project.md
     - Flink Project: c360/flink_project.md
-  - External References:
-    - Spark SQL best practices: https://jbcodeforce.github.io/spark-studies/
-    - Flink SQL best practices: https://jbcodeforce.github.io/flink-studies/coding/flink-sql/
+  - Spark SQL best practices: https://jbcodeforce.github.io/spark-studies/
+  - Flink SQL best practices: https://jbcodeforce.github.io/flink-studies/coding/flink-sql/
+  - Shift_left tools: https://jbcodeforce.github.io/shift_left_utils/
 
 theme: 
   name: material

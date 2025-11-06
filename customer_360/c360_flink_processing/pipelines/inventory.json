@@ -7,6 +7,14 @@
         "ddl_ref": "pipelines/facts/c360/fct_customer_360_profile/sql-scripts/ddl.c360_fct_customer_profile.sql",
         "table_folder_name": "pipelines/facts/c360/fct_customer_360_profile"
     },
+    "customer_analytics_c360": {
+        "table_name": "customer_analytics_c360",
+        "product_name": "c360",
+        "type": "unknown-type",
+        "dml_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/dml.customer_analytics_c360.sql",
+        "ddl_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/ddl.customer_analytics_c360.sql",
+        "table_folder_name": "pipelines/views/c360/customer_analytics_c360"
+    },
     "int_c360_customer_transactions": {
         "table_name": "int_c360_customer_transactions",
         "product_name": "c360",
