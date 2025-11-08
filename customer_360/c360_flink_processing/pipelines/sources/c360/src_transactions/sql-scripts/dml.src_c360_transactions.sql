@@ -13,7 +13,7 @@ SELECT
     currency,
     status,
     -- Derived fields
-    DATE(transaction_date) as transaction_date_only,
+    CAST(transaction_date AS DATE) as transaction_date_only,
     HOUR(transaction_date) as transaction_hour,
     DAYOFWEEK(transaction_date) as day_of_week,
     MONTH(transaction_date) as transaction_month,

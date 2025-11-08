@@ -15,16 +15,18 @@ with deduplicated_customers as (
         city,
         state,
         zip_code,
-        country
+        country,
+        event_ts
     FROM (
         SELECT *,
+  `$rowtime` as event_ts,
             ROW_NUMBER() OVER (
                 PARTITION BY customer_id 
                 ORDER BY `$rowtime` DESC
             ) AS row_num
         FROM customers_raw
         WHERE customer_id IS NOT NULL 
-    )
+    ) WHERE row_num = 1
 )
 
 SELECT 
@@ -43,12 +45,12 @@ SELECT
     state,
     zip_code,
     country,
-    TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP(3)), CURRENT_DATE) age_years,
-    TIMESTAMPDIFF(DAY, CAST(registration_date AS TIMESTAMP(3)), CURRENT_DATE) as days_since_registration,
+    TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP_LTZ(3)), event_ts) age_years,
+    TIMESTAMPDIFF(DAY, CAST(registration_date AS TIMESTAMP_LTZ(3)), event_ts) as days_since_registration,
      CASE
-        WHEN TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP(3)), CURRENT_DATE)  < 25 THEN 'Gen Z'
-        WHEN TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP(3)), CURRENT_DATE)  < 40 THEN 'Millennial'
-        WHEN TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP(3)), CURRENT_DATE) < 55 THEN 'Gen X'
+        WHEN TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP_LTZ(3)), event_ts)  < 25 THEN 'Gen Z'
+        WHEN TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP_LTZ(3)), event_ts)  < 40 THEN 'Millennial'
+        WHEN TIMESTAMPDIFF(YEAR, CAST(date_of_birth AS TIMESTAMP_LTZ(3)), event_ts) < 55 THEN 'Gen X'
         ELSE 'Boomer+' END AS generation_segment,
     CASE
         WHEN email IS NULL
@@ -59,5 +61,5 @@ SELECT
         OR phone = '' THEN 1
         ELSE 0 END AS missing_phone_flag
 FROM deduplicated_customers
-    WHERE row_num = 1
+    
 

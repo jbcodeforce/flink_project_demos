@@ -90,3 +90,4 @@ class ValidationStats:
             return 0.0
         return (self.valid_records / self.total_records) * 100
 
+

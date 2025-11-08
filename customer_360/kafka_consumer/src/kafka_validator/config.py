@@ -136,3 +136,4 @@ class ConfigManager:
             raise ValueError("SCHEMA_REGISTRY_API_SECRET environment variable not set")
         return secret
 
+

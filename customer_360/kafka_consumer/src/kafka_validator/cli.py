@@ -202,3 +202,4 @@ def _display_summary(total: int, valid: int, invalid: int, duration: float):
 if __name__ == "__main__":
     sys.exit(main())
 
+
