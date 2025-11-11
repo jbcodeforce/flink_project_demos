@@ -10,7 +10,7 @@
     "customer_analytics_c360": {
         "table_name": "customer_analytics_c360",
         "product_name": "c360",
-        "type": "unknown-type",
+        "type": "view",
         "dml_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/dml.customer_analytics_c360.sql",
         "ddl_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/ddl.customer_analytics_c360.sql",
         "table_folder_name": "pipelines/views/c360/customer_analytics_c360"

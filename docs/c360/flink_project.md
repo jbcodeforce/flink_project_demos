@@ -6,9 +6,15 @@ This chapter proposes different approaches to implement the Flink SQL queries, o
 
 ## Final architecture
 
+The high level view of a star schema implementation with Flink looks like a set of statements and Kafka topics like in the following diagram:
+
 ![](./images/kafka_flink_process.drawio.png)
 
 The current approach for pure Confluent Cloud deployment the raw topics and raw data are created using SQL in the tests folder of each src_* tables.
+
+The final pipeline looks like in the following diagram and the consitency of the pipeline deployment is done with the shift_left tool:
+
+![](./images/flink_pipeline_graph.drawio.png)
 
 ## Building the project
 
