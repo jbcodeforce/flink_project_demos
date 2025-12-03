@@ -3,7 +3,9 @@ repo_url: https://github.com/jbcodeforce/flink_project_demos
 site_url: https://jeromeboyer.net/flink_project_demos
 copyright: Copyright &copy; 2025 Jerome Boyer
 nav:
-  - Introduction: index.md
+  - Context:
+    - Introduction: index.md
+    - Ksql sources: ksql/index.md
   - Customer 360:
     - Introduction: c360/index.md
     - Data Model: c360/data_models.md

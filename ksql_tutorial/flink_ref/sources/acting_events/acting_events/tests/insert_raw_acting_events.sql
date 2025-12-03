@@ -1,4 +1,4 @@
-INSERT INTO acting_events(name, title, genre) VALUES
+INSERT INTO raw_acting_events(name, title, genre) VALUES
     ('Michael Keaton', 'Beetlejuice Beetlejuice', 'fantasy'),
     ('Joseph Gordon-Levitt', 'Killer Heat', 'drama'),
     ('Jerry Seinfeld', 'Unfrosted', 'comedy'),
@@ -7,7 +7,7 @@ INSERT INTO acting_events(name, title, genre) VALUES
     ('Christian Bale', 'The Dark Knight', 'action'),
     ('Heath Ledger', 'The Dark Knight', 'action'),
     ('Aaron Eckhart', 'The Dark Knight', 'action'),
-    ('Michael Keaton', 'Beetlejuice Beetlejuice', 'fantasy'),
+    ('Michael Keaton', 'Beetlejuice Beetlejuice', 'fantasy'), -- duplicate
     ('Gary Oldman', 'The Dark Knight', 'action'),
     ('Morgan Freeman', 'The Dark Knight', 'action'),
     ('Maggie Gyllenhaal', 'The Dark Knight', 'action'),
