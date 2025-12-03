@@ -17,3 +17,7 @@ CREATE STREAM acting_events_other AS
     SELECT name, title, genre
     FROM acting_events
     WHERE genre != 'drama' AND genre != 'fantasy';
+
+SELECT *
+FROM acting_events_fantasy
+EMIT CHANGES;

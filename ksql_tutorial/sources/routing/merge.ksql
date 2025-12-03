@@ -9,3 +9,4 @@ CREATE STREAM all_songs (artist VARCHAR, title VARCHAR, genre VARCHAR)
 
 INSERT INTO all_songs SELECT artist, title, 'rock' AS genre FROM rock_songs;
 INSERT INTO all_songs SELECT artist, title, 'classical' AS genre FROM classical_songs;
+SELECT * FROM all_songs;
