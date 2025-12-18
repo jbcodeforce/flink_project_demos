@@ -18,8 +18,9 @@ with deduplicated_customers as (
         country,
         event_ts
     FROM (
-        SELECT *,
-  `$rowtime` as event_ts,
+        SELECT 
+            *,
+            `$rowtime` as event_ts, -- propagate src ts to downstream
             ROW_NUMBER() OVER (
                 PARTITION BY customer_id 
                 ORDER BY `$rowtime` DESC

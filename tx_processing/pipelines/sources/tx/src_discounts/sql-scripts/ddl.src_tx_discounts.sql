@@ -1,13 +1,13 @@
 CREATE TABLE IF NOT EXISTS src_tx_discounts (
-
-  -- put here column definitions
-  PRIMARY KEY(default_key) NOT ENFORCED
-) DISTRIBUTED BY HASH(default_key) INTO 1 BUCKETS
-WITH (
-  'changelog.mode' = 'upsert',
-  'key.avro-registry.schema-context' = '.flink-dev',
+  `city` VARCHAR(2147483647),
+  `merchant_name` VARCHAR(2147483647),
+  `min_transaction_value` DECIMAL(10, 2),
+  `discount_amount` DECIMAL(10, 2),
+  `timestamp` TIMESTAMP(3) WITH LOCAL TIME ZONE,
+  WATERMARK FOR `timestamp` AS `timestamp` - INTERVAL '5' SECONDS
+) WITH (
+  'changelog.mode' = 'append',
   'value.avro-registry.schema-context' = '.flink-dev',
-  'key.format' = 'avro-registry',
   'value.format' = 'avro-registry',
   'kafka.retention.time' = '0',
   'kafka.producer.compression.type' = 'snappy',

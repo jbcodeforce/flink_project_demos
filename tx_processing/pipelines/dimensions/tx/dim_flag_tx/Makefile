@@ -1,7 +1,7 @@
 include ../../../common.mk
 
-# --- src_tx_transactions
-TABLE_NAME=src_tx_transactions
+# --- dim_flag_tx
+TABLE_NAME=dim_flag_tx
 SCRIPT_PRE_KEBAB=dev-usw2-tx
 SCRIPT_POST_KEBAB=$(subst _,-,$(TABLE_NAME))
 
@@ -14,25 +14,19 @@ DML_PROPERTIES=./sql-scripts/dml.$(TABLE_NAME).properties
 DML_TESTS_SCRIPT=./tests/dml.$(TABLE_NAME).sql
 
 # --- Entry point
-create_src_tx_transactions: create_flink_ddl  create_flink_dml
+create_dim_flag_tx: create_flink_ddl  create_flink_dml
 
 
 # --- Topic used as source
 list_record_data_from_topic:
 	$(call list_topic_content, $(TABLE_NAME))
 
-# -- Faker
-FAKER_STATEMENT=$(SCRIPT_PRE_KEBAB)-faker-$(SCRIPT_POST_KEBAB)
-FAKER_SCRIPT=./tests/dml_faker.sql
-create_flink_faker:
-	$(call create_flink_statement, $(FAKER_STATEMENT), $(FAKER_SCRIPT)) 
-
-
 # --- DDL 
 create_flink_ddl: 
 	$(call create_flink_statement, $(DDL_STATEMENT), $(DDL_SCRIPT)) 
 	$(call delete_flink_statement, $(DDL_STATEMENT) )
-	
+
+
 describe_flink_ddl:
 	$(call describe_flink_statement,  $(DDL_STATEMENT))
 

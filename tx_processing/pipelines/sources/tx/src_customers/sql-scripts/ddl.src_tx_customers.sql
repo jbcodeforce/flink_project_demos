@@ -1,8 +1,14 @@
 CREATE TABLE IF NOT EXISTS src_tx_customers (
-
-  -- put here column definitions
-  PRIMARY KEY(default_key) NOT ENFORCED
-) DISTRIBUTED BY HASH(default_key) INTO 1 BUCKETS
+  `account_number` VARCHAR(2147483647) NOT NULL,
+  `customer_name` VARCHAR(2147483647),
+  `email` VARCHAR(2147483647),
+  `phone_number` VARCHAR(2147483647),
+  `date_of_birth` TIMESTAMP(3),
+  `city` VARCHAR(2147483647),
+  `created_at` TIMESTAMP(3) WITH LOCAL TIME ZONE,
+   WATERMARK FOR `created_at` AS `created_at`  - INTERVAL '5' SECONDS,
+  PRIMARY KEY(account_number) NOT ENFORCED
+) DISTRIBUTED BY (account_number) INTO 1 BUCKETS
 WITH (
   'changelog.mode' = 'upsert',
   'key.avro-registry.schema-context' = '.flink-dev',
