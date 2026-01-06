@@ -10,3 +10,5 @@
 **/.python-version
 **/.uv/
 site/
+**/terraform.tfstate
+**/terraform.tfstate.backup

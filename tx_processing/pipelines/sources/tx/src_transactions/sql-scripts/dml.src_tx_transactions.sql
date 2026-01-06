@@ -1,3 +1,4 @@
+
 insert into src_tx_transactions 
 select 
   `txn_id`,

@@ -1,3 +1,4 @@
+SET 'sql.state-ttl' = '1 hour';
 CREATE TABLE IF NOT EXISTS src_tx_transactions (
   `txn_id` VARCHAR(36) NOT NULL,
   `account_number` VARCHAR(255),

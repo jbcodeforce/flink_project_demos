@@ -1,13 +1,13 @@
 insert into dim_flag_tx
-with flagged_above_total_withdraw as (
+with flagged_above_withdraw_total as (
   SELECT 
     `account_number`,
     SUM(amount) OVER  w as withdraw_total,
      merchant,
-     CASE WHEN SUM(amount) OVER  w  > '1000' 
+     CASE WHEN SUM(amount) OVER  w  > '9900' 
           THEN TRUE
-          ELSE FALSE END AS flag,
-    'Over 1000 withdraw' as reason,
+          ELSE FALSE END AS withdraw_total_flag,
+    'Over 9900 withdraw' as reason,
     `timestamp`
     FROM src_tx_transactions
     WHERE transaction_type = 'withdrawal'
@@ -15,10 +15,10 @@ with flagged_above_total_withdraw as (
 WINDOW w AS (
  PARTITION BY account_number, transaction_type
     ORDER BY `timestamp` ASC
-    ROWS BETWEEN 5 PRECEDING  AND CURRENT ROW)
+    RANGE BETWEEN INTERVAL '5' HOUR PRECEDING AND CURRENT ROW)
 ) 
 
-merchant_within_2_hours as (
+flagged_merchant_within_2_hours as (
   SELECT
     `account_number`,
     SUM(amount) OVER  w as withdraw_total,
@@ -26,7 +26,7 @@ merchant_within_2_hours as (
      count(*) over w as withdraw_count,
     CASE WHEN COUNT(*) OVER  w  > 2
           THEN TRUE
-          ELSE FALSE END AS flag,
+          ELSE FALSE END AS merchant_within_2_hours_flag,
     'Multiple withdraws in 2 hours' as reason,
     `timestamp`
     FROM src_tx_transactions
@@ -39,6 +39,10 @@ merchant_within_2_hours as (
     
 )
 
-select 
-  
-select * from flagged_above_total_withdraw;
+all_flagged as (  
+  select * from flagged_above_withdraw_total where withdraw_total_flag = TRUE
+  union all
+  select * from flagged_merchant_within_2_hours where merchant_within_2_hours_flag = TRUE
+)
+
+select * from all_flagged;

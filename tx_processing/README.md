@@ -62,9 +62,9 @@ src_tx_customers (1) ──────< src_tx_transactions (N)
 
 ## Set up to use shift_left for this project
 
-Recall shift_left doc is [here.]()
+Recall shift_left doc is [here](https://jbcodeforce.github.io/shift_left_utils/recipes/#create-a-flink-project-structure) with the recipe to create a project.
 
-1. Set a config.yaml for shift_left
+1. Set a config.yaml for shift_left (see [instructions](https://jbcodeforce.github.io/shift_left_utils/tutorial/setup_lab/#3-get-confluent-cloud-information))
 1. Set environment variables
     ```
     export CCLOUD_ENV_ID=env-nknqp3
@@ -87,7 +87,7 @@ Recall shift_left doc is [here.]()
     export SL_LLM_MODEL=qwen3-coder:30b
     export SL_LLM_API_KEY=ollama
     ```
-1. Define the last env variables for the project See file([set_sl_env.sh](set_sl_env.sh))
+1. Define the env variables for the project See file([set_sl_env.sh](set_sl_env.sh)). It is better to separate the settings of those variables so project specific can be separate from secrets information.
 1. Verify configuration:
     ```sh
     shift_left project validate-config
@@ -100,12 +100,12 @@ Recall shift_left doc is [here.]()
     shift_left project init tx_processing flink_project_demos
     ```
 
-* Then tables are created using:
+* Then tables are created using command such as:
     ```sql
     shift_left table init src_customers $PIPELINE/sources  --product-name tx
     ```
 
-* For each source table that uses Faker to generate data, the tests folder includes the needed SQL to create the faker.
+* For each source table that uses Faker to generate data, the `tests` folder includes the needed SQL to create the faker.
 * Tracking:
 
 | Table | Purpose | Specials | Status |
@@ -117,11 +117,19 @@ Recall shift_left doc is [here.]()
 | discounts_faker | Generate synthetic data | Faker record generation in tests under src_tx_customers | Gernerate records |
 | src_tx_discounts | Deduplicate discounts | ddl in upsert and dml for dedup  | ✅ DDL ✅ DML |
 
+### Adding Terraform
+
+The [cc-terraform folder](./cc-terraform/) includes the [README.md](./cc-terraform/README.md) to explain the process to develop and deployment the Flink statements using terraform.
+
+Once a statement is tested with confluent CLI or within the Confluent Flink Workspace, it can be saved in the pipeline folder and a `resource "confluent_flink_statement"` element is added to the [flink_statements.tf](./cc-terraform/flink_statements.tf) or to new tf file.
+
 ## Preparing dimensions
+
+Dimension represents descriptive attributes or context (the "who, what, where, when, why") about a business event, like a product, customer, time, or location, stored in denormalized tables linked to a central fact table. [See the explanations of the star schema.](https://jbcodeforce.github.io/flink-studies/concepts/#the-star-schema)
 
 ### Flag transactions
 
-The goal is to assess total withdraws higher than a threshold over a time period, or multiple withdraw in the same merchant within 2 hours.
+The goal is to assess when the withdraw total becomes higher than a threshold over a time period:
 
 * Build a dimension to flag the high withdraw account over the last 2 hours. As the window operation does not support update and retraction, we need to have the src_transction to be insert only.
     ```sh
