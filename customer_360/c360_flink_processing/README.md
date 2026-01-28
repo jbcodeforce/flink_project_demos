@@ -1,7 +1,60 @@
 # Flink Processing Demonstration
 
-The data model and pipeline design match the Spark Processing. See [the data model section.]()
+This is the Flink implementation of the customer 360 analytics data product.
 
+The data model and pipeline design match the Spark Processing. See [the data model section.](https://jbcodeforce.github.io/flink_project_demos/c360/data_models/)
+
+## How to use it for demonstration
+
+* First create the source tables using terraform to simulate CDC topics and prepare some test data
+  ```sh
+  cd IaC
+  mv terraform.tfvars.example terraform.tfvars
+  # modify the variable definitions inside terraform.tfvars
+  terraform init
+  terraform plan
+  terraform deploy
+  ```
+
+* Use the shift_left utility to deploy the solution. Be sure to export the environment variables
+  ```sh
+  source .env
+  shift_left project validate-config
+
+  shift_left table build-inventory
+
+  shift_left pipeline build-all-metadata
+  ```
+
+* Validate the execution plan:
+  ```sh
+  shift_left pipeline build-execution-plan --product-name c360
+  ```
+
+* Deploy
+  ```sh
+  shift_left pipeline deploy --product-name c360
+  ```
+
+* The expected results look like:
+  ```sh
+  --------------------------------------------------------------------------------------------------------
+  Table_name                                              | Status     | Pending Records | Num Records Out
+  --------------------------------------------------------------------------------------------------------
+  src_c360_support_ticket                                 | RUNNING    |               0 |              18
+  src_c360_loyalty_program                                | RUNNING    |               0 |              15
+  src_c360_customers                                      | RUNNING    |               0 |              16
+  src_c360_app_usage                                      | RUNNING    |               0 |              20
+  src_c360_transactions                                   | RUNNING    |               0 |              20
+  src_c360_tx_items                                       | RUNNING    |               0 |               0
+  src_c360_products                                       | RUNNING    |               0 |               0
+  int_c360_customer_transactions                          | RUNNING    |               0 |               0
+  c360_fct_customer_profile                               | RUNNING    |               0 |              27
+  customer_analytics_c360                                 | RUNNING    |               0 |               3
+  --------------------------------------------------------------------------------------------------------
+  ```
+
+* In the Flink Workspace a `select * from c360_fct_customer_profile` should give the c360 data analytic records,
 ## Pipeline Tables
 
 This section lists all DDL (Data Definition Language) and DML (Data Manipulation Language) files organized by data layer.

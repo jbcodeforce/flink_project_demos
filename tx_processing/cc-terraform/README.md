@@ -1,58 +1,36 @@
 # Terraform to deploy infrastructure of the tx_processing demo
 
-## Flink resources needed
+[See Confluent Terraform documentation](https://docs.confluent.io/cloud/current/clusters/terraform-provider.html) and [this confluent terraform github samples](https://github.com/confluentinc/terraform-provider-confluent/tree/master/examples/configurations) and the Flink-studies [book chapter](https://jbcodeforce.github.io/flink-studies/coding/terraform/).
 
-* Confluent cloud environment
-* A Service Account as environment admin
-* Kafka Cluster with API key
-* A schema registry with API key
-* Kafka Cluster
-* Schema Registry
-* Flink service accounts: `flink-app` (with ClusterAdmin role, DeveloperRead and DeveloperWrite on schema registry), `flink-developer-sa` (FlinkDeveloper), Flink API key owned by Flink Developer SA
-* Flink compute pools: a default and one for data generations
+## Confluent Cloud resources needed
+
+We assume you already have a Confluent Cloud Environment with at least Kafka cluster and schema registry. 
+
+[See this section to use resource importer for your own resources](https://jbcodeforce.github.io/flink-studies/coding/terraform/#resource-importer)
+
+To add Flink specific resources, we propose to follow the process outlined in [this section - "add Flink resources to an existing environment"](https://jbcodeforce.github.io/flink-studies/coding/terraform/#adding-flink-to-an-existing-environment).
+
+### Flink Resource Summary
+
+| Resource | Purpose |
+|----------|---------|
+| `flink-app` service account | Runtime principal for Flink statements |
+| `flink-developer-sa` service account | Deploys Flink statements |
+| `CloudClusterAdmin` role binding | Allows flink-app to access Kafka cluster |
+| `DeveloperRead/Write` role bindings | Allows flink-app to access Schema Registry |
+| `FlinkDeveloper` role binding | Allows flink-developer-sa to create statements |
+| `Assigner` role binding | Allows flink-developer-sa to assign flink-app as principal |
+| Flink API key | Authentication for deploying statements |
+| Compute pool | Resources for running Flink statements |
+
+
+Once done we can focus on adding Flink statements for the application.
+
+## Adding Flink Statements
+
 * Flink statements for clicks, customers, products data generation
 
-1. Set environment variables for API Keys and Secrets in a .env file and source it:
-    ```sh
-    source .env
-    ```
-
-## Build the Terraform manifests incrementally
-
-The approach is to reuse an existing environment and add Flink resources.
 
 
-1. Create a main.tf with the confluent cloud provider. (see a main.tf [example here](https://github.com/confluentinc/terraform-provider-confluent/blob/master/examples/configurations/basic-kafka-acls/main.tf))
 
-1. Init:
-    ```sh
-    terraform init
-    ```
-
-1. Add variables.tf: we need at least: `confluent_cloud_api_key, confluent_cloud_api_secret, cloud_provider, cloud_region and prefix`. Each variable definition has the same structure:
-
-    ```terraform
-    variable "prefix" {
-        description = "Prefix for resource names to avoid conflicts"
-        type        = string
-        default     = "j9r"
-    }
-    ```
-    
-1. Define specific variable values using: `terraform.tfvars` or use default values.
-1. Define an `env.tf` for Confluent Cloud environment definition.
-1. When using an existing environment, add an `imports.tf` with declaration like:
-    ```tf
-    import {
-        to = confluent_environment.env
-        id = "env-nknqp3"
-    }
-    ```
-1. Define an `output.tf` to get expected information. See [Confluent example](https://github.com/confluentinc/terraform-provider-confluent/blob/master/examples/configurations/basic-kafka-acls/outputs.tf).
-1. At each iteration of adding resources, do:
-    ```sh
-    terraform validate
-    terraform plan
-    terraform apply
-    ```
 

@@ -1,6 +1,6 @@
 # Transaction Processing
 
-This contribution is coming from Confluent's Mustafa Bhanpurawala contributions. It is organized as a project to build data product and being managed by shift_left tool. It was adapted to extend the domain model of the transaction processing.
+This contribution is coming from Confluent's Mustafa Bhanpurawala's own contributions. It is organized as a project to build data product and being managed by shift_left tool and Terraform. It was adapted to extend the domain model of the transaction processing.
 
 ## Domain Data Model
 
@@ -87,6 +87,7 @@ Recall shift_left doc is [here](https://jbcodeforce.github.io/shift_left_utils/r
     export SL_LLM_MODEL=qwen3-coder:30b
     export SL_LLM_API_KEY=ollama
     ```
+
 1. Define the env variables for the project See file([set_sl_env.sh](set_sl_env.sh)). It is better to separate the settings of those variables so project specific can be separate from secrets information.
 1. Verify configuration:
     ```sh
@@ -119,9 +120,11 @@ Recall shift_left doc is [here](https://jbcodeforce.github.io/shift_left_utils/r
 
 ### Adding Terraform
 
-The [cc-terraform folder](./cc-terraform/) includes the [README.md](./cc-terraform/README.md) to explain the process to develop and deployment the Flink statements using terraform.
+The [cc-terraform folder](./cc-terraform/) includes the [README.md](./cc-terraform/README.md) to describe the solution specific elements for deployment and [this chapter](https://jbcodeforce.github.io/flink-studies/flink-studies/coding/terraform/) to explain the process to develop and deploy the Flink statements using Terraform.
 
-Once a statement is tested with confluent CLI or within the Confluent Flink Workspace, it can be saved in the pipeline folder and a `resource "confluent_flink_statement"` element is added to the [flink_statements.tf](./cc-terraform/flink_statements.tf) or to new tf file.
+Once a statement is tested with Confluent CLI or within the Confluent Flink Workspace, it can be saved in the pipeline folder and a `resource "confluent_flink_statement"` element is added to the [flink_statements.tf](./cc-terraform/flink_statements.tf) or to new tf file.
+
+---
 
 ## Preparing dimensions
 
