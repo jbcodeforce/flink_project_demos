@@ -1,6 +1,8 @@
 # Flink Processing Demonstration
 
-This is the Flink implementation of the customer 360 analytics data product.
+This is the Flink implementation of the customer 360 analytics data product. The global flow looks like in the figure below:
+
+![](../../docs/c360/images/kafka_flink_process.drawio.png)
 
 The data model and pipeline design match the Spark Processing. See [the data model section.](https://jbcodeforce.github.io/flink_project_demos/c360/data_models/)
 
@@ -48,13 +50,18 @@ The data model and pipeline design match the Spark Processing. See [the data mod
   src_c360_transactions                                   | RUNNING    |               0 |              20
   src_c360_tx_items                                       | RUNNING    |               0 |               0
   src_c360_products                                       | RUNNING    |               0 |               0
+  src_c360_shipments                                      | RUNNING    |               0 |              20
+  src_c360_tracking_events                                | RUNNING    |               0 |              30
   int_c360_customer_transactions                          | RUNNING    |               0 |               0
+  dim_c360_order_fulfillment                              | RUNNING    |               0 |              20
   c360_fct_customer_profile                               | RUNNING    |               0 |              27
+  c360_fct_order_fulfillment                              | RUNNING    |               0 |              20
   customer_analytics_c360                                 | RUNNING    |               0 |               3
+  fulfillment_analytics_c360                              | RUNNING    |               0 |              20
   --------------------------------------------------------------------------------------------------------
   ```
 
-* In the Flink Workspace a `select * from c360_fct_customer_profile` should give the c360 data analytic records,
+* In the Flink Workspace, `select * from c360_fct_customer_profile` returns customer 360 records; `select * from fulfillment_analytics_c360` returns fulfillment and delivery analytics.
 ## Pipeline Tables
 
 This section lists all DDL (Data Definition Language) and DML (Data Manipulation Language) files organized by data layer.
@@ -70,6 +77,8 @@ This section lists all DDL (Data Definition Language) and DML (Data Manipulation
 | app_usage_raw | ok | ok | 20 rows |
 | support_ticket_raw | ok | ok | 18 rows |
 | loyalty_program_raw | ok | ok | 15 rows |
+| shipments_raw | ok | ok | 20 rows |
+| tracking_events_raw | ok | ok | 30 rows |
 
 ### Source Layer Tables
 
@@ -82,30 +91,36 @@ This section lists all DDL (Data Definition Language) and DML (Data Manipulation
 | `src_c360_app_usage` | `ddl.src_c360_app_usage.sql` | `dml.src_c360_app_usage.sql` | Deploy first - no dependencies | Immediate after Kafka topic has data |
 | `src_c360_support_ticket` | `ddl.src_c360_support_ticket.sql` | `dml.src_c360_support_ticket.sql` | Deploy first - no dependencies | Immediate after Kafka topic has data |
 | `src_c360_loyalty_program` | `ddl.src_c360_loyalty_program.sql` | `dml.src_c360_loyalty_program.sql` | Deploy first - no dependencies | Immediate after Kafka topic has data |
+| `src_c360_shipments` | `ddl.src_c360_shipments.sql` | `dml.src_c360_shipments.sql` | Deploy first - no dependencies | Immediate after Kafka topic has data |
+| `src_c360_tracking_events` | `ddl.src_c360_tracking_events.sql` | `dml.src_c360_tracking_events.sql` | Deploy first - no dependencies | Immediate after Kafka topic has data |
 
 ### Intermediate Layer Tables
 
 | Table Name | DDL File | DML File | Deployment | Data Visibility |
 |-----------|----------|----------|------------|-----------------|
-| `int_c360_customer_transactions` | `ddl.int_c360_customer_transactions.sql` | `dml.int_c360_customer_transactions.sql` | okay |  15 records |
+| `int_c360_customer_transactions` | `ddl.int_c360_customer_transactions.sql` | `dml.int_c360_customer_transactions.sql` | After sources | 15 records |
+| `dim_c360_order_fulfillment` | `ddl.int_c360_order_fulfillment.sql` | `dml.int_c360_order_fulfillment.sql` | After src_c360_shipments, src_c360_transactions | One row per shipment |
 
 ### Fact Layer Tables
 
 | Table Name | DDL File | DML File | Deployment | Data Visibility |
 |-----------|----------|----------|------------|-----------------|
 | `c360_fct_customer_profile` | `ddl.c360_fct_customer_profile.sql` | `dml.c360_fct_customer_profile.sql` | Deploy after intermediate and source tables | After all upstream dependencies have data |
+| `c360_fct_order_fulfillment` | `ddl.c360_fct_order_fulfillment.sql` | `dml.c360_fct_order_fulfillment.sql` | Deploy after dim_c360_order_fulfillment and src_c360_customers | One row per shipment |
 
-### View Table
+### View Tables
 
 | Table Name | DDL File | DML File | Deployment | Data Visibility |
 |-----------|----------|----------|------------|-----------------|
-| `c360_fct_customer_profile` | `ddl.c360_fct_customer_profile.sql` | `dml.c360_fct_customer_profile.sql` | Deploy after intermediate and source tables | After all upstream dependencies have data |
+| `customer_analytics_c360` | `ddl.customer_analytics_c360.sql` | `dml.customer_analytics_c360.sql` | After c360_fct_customer_profile | Customer 360 profile for CRM/BI |
+| `fulfillment_analytics_c360` | `ddl.fulfillment_analytics_c360.sql` | `dml.fulfillment_analytics_c360.sql` | After c360_fct_order_fulfillment | Fulfillment and delivery analytics for ops |
 
 ## Deployment Order
 
-1. **Source Layer**: Deploy all source tables in parallel (no dependencies on each other)
-2. **Intermediate Layer**: Deploy after source tables are running
-3. **Fact Layer**: Deploy after intermediate and source tables are running
+1. **Source Layer**: Deploy all source tables in parallel (no dependencies on each other), including `src_c360_shipments` and `src_c360_tracking_events` for the fulfillment product
+2. **Intermediate / Dimension Layer**: Deploy `int_c360_customer_transactions` and `dim_c360_order_fulfillment` after source tables are running
+3. **Fact Layer**: Deploy `c360_fct_customer_profile` and `c360_fct_order_fulfillment` after their dimension/source dependencies
+4. **View Layer**: Deploy `customer_analytics_c360` and `fulfillment_analytics_c360` after their fact tables
 
 ## Data Visibility Notes
 

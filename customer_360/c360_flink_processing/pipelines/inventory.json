@@ -15,13 +15,13 @@
         "ddl_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/ddl.customer_analytics_c360.sql",
         "table_folder_name": "pipelines/views/c360/customer_analytics_c360"
     },
-    "int_c360_customer_transactions": {
-        "table_name": "int_c360_customer_transactions",
+    "dim_c360_customer_transactions": {
+        "table_name": "dim_c360_customer_transactions",
         "product_name": "c360",
-        "type": "intermediate",
-        "dml_ref": "pipelines/intermediates/c360/int_customer_transactions/sql-scripts/dml.int_c360_customer_transactions.sql",
-        "ddl_ref": "pipelines/intermediates/c360/int_customer_transactions/sql-scripts/ddl.int_c360_customer_transactions.sql",
-        "table_folder_name": "pipelines/intermediates/c360/int_customer_transactions"
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/dml.int_c360_customer_transactions.sql",
+        "ddl_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/ddl.int_c360_customer_transactions.sql",
+        "table_folder_name": "pipelines/dimensions/c360/dim_customer_transactions"
     },
     "src_c360_app_usage": {
         "table_name": "src_c360_app_usage",
@@ -78,5 +78,45 @@
         "dml_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/dml.src_c360_tx_items.sql",
         "ddl_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/ddl.src_c360_tx_items.sql",
         "table_folder_name": "pipelines/sources/c360/src_tx_items"
+    },
+    "src_c360_shipments": {
+        "table_name": "src_c360_shipments",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_shipments/sql-scripts/dml.src_c360_shipments.sql",
+        "ddl_ref": "pipelines/sources/c360/src_shipments/sql-scripts/ddl.src_c360_shipments.sql",
+        "table_folder_name": "pipelines/sources/c360/src_shipments"
+    },
+    "src_c360_tracking_events": {
+        "table_name": "src_c360_tracking_events",
+        "product_name": "c360",
+        "type": "source",
+        "dml_ref": "pipelines/sources/c360/src_tracking_events/sql-scripts/dml.src_c360_tracking_events.sql",
+        "ddl_ref": "pipelines/sources/c360/src_tracking_events/sql-scripts/ddl.src_c360_tracking_events.sql",
+        "table_folder_name": "pipelines/sources/c360/src_tracking_events"
+    },
+    "dim_c360_order_fulfillment": {
+        "table_name": "dim_c360_order_fulfillment",
+        "product_name": "c360",
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/c360/dim_order_fulfillment/sql-scripts/dml.int_c360_order_fulfillment.sql",
+        "ddl_ref": "pipelines/dimensions/c360/dim_order_fulfillment/sql-scripts/ddl.int_c360_order_fulfillment.sql",
+        "table_folder_name": "pipelines/dimensions/c360/dim_order_fulfillment"
+    },
+    "c360_fct_order_fulfillment": {
+        "table_name": "c360_fct_order_fulfillment",
+        "product_name": "c360",
+        "type": "fact",
+        "dml_ref": "pipelines/facts/c360/fct_order_fulfillment/sql-scripts/dml.c360_fct_order_fulfillment.sql",
+        "ddl_ref": "pipelines/facts/c360/fct_order_fulfillment/sql-scripts/ddl.c360_fct_order_fulfillment.sql",
+        "table_folder_name": "pipelines/facts/c360/fct_order_fulfillment"
+    },
+    "fulfillment_analytics_c360": {
+        "table_name": "fulfillment_analytics_c360",
+        "product_name": "c360",
+        "type": "view",
+        "dml_ref": "pipelines/views/c360/fulfillment_analytics_c360/sql-scripts/dml.fulfillment_analytics_c360.sql",
+        "ddl_ref": "pipelines/views/c360/fulfillment_analytics_c360/sql-scripts/ddl.fulfillment_analytics_c360.sql",
+        "table_folder_name": "pipelines/views/c360/fulfillment_analytics_c360"
     }
 }

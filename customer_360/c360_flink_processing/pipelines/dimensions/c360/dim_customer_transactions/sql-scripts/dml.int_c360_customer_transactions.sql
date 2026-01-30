@@ -1,4 +1,4 @@
-INSERT INTO int_c360_customer_transactions
+INSERT INTO dim_c360_customer_transactions
 WITH transaction_items AS (
     SELECT 
         transaction_id,

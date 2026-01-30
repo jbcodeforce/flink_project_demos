@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS int_c360_customer_transactions (
+CREATE TABLE IF NOT EXISTS dim_c360_customer_transactions (
   customer_id STRING,
   first_name STRING,
   last_name STRING,

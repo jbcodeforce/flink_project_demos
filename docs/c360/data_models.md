@@ -242,6 +242,11 @@ This document defines the data models for the Customer 360 data product across f
 - **Fulfillment Data**: Link shipments and tracking_events to customer orders
 - **Product Preferences**: Analyze transaction_items to understand product affinity
 
+### C360 Data Products (Flink):
+
+- **Customer 360 Profile** (`customer_analytics_c360`): Consumable view for CRM, BI, and ML. One row per customer. Sources: customers, loyalty_program, support_ticket, app_usage, transactions (via dim_c360_customer_transactions). Fact: `c360_fct_customer_profile`.
+- **Order Fulfillment / Delivery Experience** (`fulfillment_analytics_c360`): Consumable view for ops and CX. One row per shipment. Real-time fulfillment health, SLA (on time / late), carrier, and customer segment. Sources: shipments, transactions, customers. Dimension: `dim_c360_order_fulfillment`. Fact: `c360_fct_order_fulfillment`. Data owner: Operations / Logistics.
+
 ## Mock Data Generation
 
 - **Location**: `c360_mock_data/` directory

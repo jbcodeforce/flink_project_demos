@@ -51,6 +51,14 @@ locals {
       ddl_path = "../pipelines/sources/c360/src_app_usage/tests/ddl.app_usage_raw.sql"
       dml_path = "../pipelines/sources/c360/src_app_usage/tests/insert_app_usage_raw.sql"
     }
+    "src_shipments": {
+      ddl_path = "../pipelines/sources/c360/src_shipments/tests/ddl.shipments_raw.sql"
+      dml_path = "../pipelines/sources/c360/src_shipments/tests/insert_shipments_raw.sql"
+    }
+    "src_tracking_events": {
+      ddl_path = "../pipelines/sources/c360/src_tracking_events/tests/ddl.tracking_events_raw.sql"
+      dml_path = "../pipelines/sources/c360/src_tracking_events/tests/insert_tracking_events_raw.sql"
+    }
   }
 }
 # -----------------------------------------------------------------------------

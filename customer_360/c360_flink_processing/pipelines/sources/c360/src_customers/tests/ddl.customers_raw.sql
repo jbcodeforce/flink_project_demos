@@ -13,7 +13,8 @@ create table customers_raw (
     city STRING,
     state STRING,
     zip_code STRING,
-    country STRING
+    country STRING,
+    event_ts TIMESTAMP(3)
 ) distributed by hash(customer_id) into 1 buckets with (
     'changelog.mode' = 'append',
     'key.avro-registry.schema-context' = '.flink-dev',

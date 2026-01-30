@@ -8,16 +8,16 @@ Better to read the content using [the mkdoc published site](https://jbcodeforce.
 
 To run the different demonstrations:
 
-* [Run batch processing and web app - see the readme](./c360_spark_processing/README.md)
-* Run the Flink processing using Confluent Cloud for Flink and Kafka [see this readme.](./c360_flink_processing/README.md)
-* Run the Flink processing using Confluent Platform for Flink and Kafka [see this readme]()
+* [Run batch processing and web app - see the readme](./customer_360/c360_spark_processing/README.md)
+* Run the Flink processing using Confluent Cloud for Flink and Kafka [see this readme.](./customer_360/c360_flink_processing/README.md)
+* Not Yet Done - Run the Flink processing using Confluent Platform for Flink and Kafka [see this readme]()
 
 ### References
 
 * [Data as a product methodology](https://jbcodeforce.github.io/flink-studies/methodology/data_as_a_product/)
 * [Managing your Shift Left Flink project - CLI](https://jbcodeforce.github.io/shift_left_utils) an opiniated solution to manage your Flink project at scale on Confluent Cloud.
 * [From Spark to Flink migration with AI](https://jbcodeforce.github.io/shift_left_utils/coding/llm_based_translation/)
-* [SQL Flink studies and best practices](https://jbcodeforce.github.io/flink-studies/coding/flink-sql/)
+* [SQL Flink studies and best practices](https://jbcodeforce.github.io/flink-studies/coding/flink-sql-1/) and [this dml one](https://jbcodeforce.github.io/flink-studies/coding/flink-sql-2/)
 
 ## 🙏 Support my work
 
