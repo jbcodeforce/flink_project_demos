@@ -1,0 +1,5 @@
+# Generated parquet files (regenerate with uv run export-views-to-parquet)
+*.parquet
+
+# Optional Iceberg metadata (if you add Iceberg layer later)
+iceberg/

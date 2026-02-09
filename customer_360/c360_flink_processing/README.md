@@ -1,26 +1,47 @@
-# Flink Processing Demonstration
+# Customer 360 profile with Flink
 
-This is the Flink implementation of the customer 360 analytics data product. The global flow looks like in the figure below:
+This is the Flink implementation of the customer 360 analytics data product. It was created by using the shift_left tool to automatically migrate the Spark SQL batch processing to a real-time Flink SQL based processing. 
+
+The goal of this asset is to demonstrate how a shift left project looks like, how to manage a Flink project and how to design Data analytics as a product.
+
+At the high level a medallion structure done in Flink will loop the same as in the following figure:
 
 ![](../../docs/c360/images/kafka_flink_process.drawio.png)
 
+This project was created mid 2025 to demonstrate the Customer 360 profile data analytic product, specially:
+
+* Loyalty program statistic
+* Support metrics
+* Transaction metrics
+* App usage metrics
+* The RFM-like scoring
+
 The data model and pipeline design match the Spark Processing. See [the data model section.](https://jbcodeforce.github.io/flink_project_demos/c360/data_models/)
 
-## How to use it for demonstration
+Starting 2026, we are adding other data products to illustrate how to manage different data product and reuse existing dimensions or facts, cross product. The shipment data analytics is added under the product name: `sdp`. The following metrics are considered:
+
+* actual_delivery_date deviation for expected delivery date
+* number of time the ETA estimations were wrong
+* average shipping cost
+* shipping per customer segment
+* sla violation metric
+
+
+## How to run this demonstration
 
 * First create the source tables using terraform to simulate CDC topics and prepare some test data
   ```sh
   cd IaC
   mv terraform.tfvars.example terraform.tfvars
-  # modify the variable definitions inside terraform.tfvars
+  # modify the variable settings inside terraform.tfvars with your Confluent Cloud existing resources
   terraform init
   terraform plan
   terraform deploy
   ```
 
-* Use the shift_left utility to deploy the solution. Be sure to export the environment variables
+* Use the shift_left utility to deploy the solution. Be sure to export the environment variables for PIPELINES and CONFIG_FILE
   ```sh
-  source .env
+  source set_env
   shift_left project validate-config
 
   shift_left table build-inventory
@@ -28,7 +49,19 @@ The data model and pipeline design match the Spark Processing. See [the data mod
   shift_left pipeline build-all-metadata
   ```
 
-* Validate the execution plan:
+* Verify the customer 360 view dependency graph
+  ```sh
+  shift_left pipeline report customer_analytics_c360 --open
+  ```
+
+![](./docs/c360_view_graph.png)
+
+* Verify the shipment  analytics data product
+  ```
+  pipeline report sdp_fulfillment_analytics --open
+  ```
+
+* Validate the execution plan for the customer 360 data product 
   ```sh
   shift_left pipeline build-execution-plan --product-name c360
   ```
@@ -62,6 +95,8 @@ The data model and pipeline design match the Spark Processing. See [the data mod
   ```
 
 * In the Flink Workspace, `select * from c360_fct_customer_profile` returns customer 360 records; `select * from fulfillment_analytics_c360` returns fulfillment and delivery analytics.
+
+
 ## Pipeline Tables
 
 This section lists all DDL (Data Definition Language) and DML (Data Manipulation Language) files organized by data layer.
@@ -121,6 +156,10 @@ This section lists all DDL (Data Definition Language) and DML (Data Manipulation
 2. **Intermediate / Dimension Layer**: Deploy `int_c360_customer_transactions` and `dim_c360_order_fulfillment` after source tables are running
 3. **Fact Layer**: Deploy `c360_fct_customer_profile` and `c360_fct_order_fulfillment` after their dimension/source dependencies
 4. **View Layer**: Deploy `customer_analytics_c360` and `fulfillment_analytics_c360` after their fact tables
+
+## Dashboard data
+
+Parquet snapshots of the analytics views (`customer_analytics_c360`, `sdp_fulfillment_analytics`) are available under [dashboard_data/](dashboard_data/) for building a dashboard with DuckDB. Generate sample parquet with `scripts/export_views_to_parquet.py` and query with DuckDB; see [dashboard_data/README.md](dashboard_data/README.md) for layout, usage, and optional Kafka export or Iceberg.
 
 ## Data Visibility Notes
 

@@ -23,41 +23,33 @@ locals {
   
 
  tables = {
-    "src_tx_items" : {
+    "tx_items_raw" : {
       ddl_path = "../pipelines/sources/c360/src_tx_items/tests/ddl.tx_items_raw.sql"
       dml_path = "../pipelines/sources/c360/src_tx_items/tests/insert_tx_items_raw.sql"
     }
-    "src_transactions" : {
+    "tx_raw" : {
       ddl_path = "../pipelines/sources/c360/src_transactions/tests/ddl.tx_raw.sql"
       dml_path = "../pipelines/sources/c360/src_transactions/tests/insert_tx_raw.sql"
     }
-    "src_support_ticket" : {
+    "support_ticket_raw" : {
       ddl_path = "../pipelines/sources/c360/src_support_ticket/tests/ddl.support_ticket_raw.sql"
       dml_path = "../pipelines/sources/c360/src_support_ticket/tests/insert_support_ticket_raw.sql"
     }
-    "src_products": {
+    "products_raw": {
       ddl_path = "../pipelines/sources/c360/src_products/tests/ddl.product_raw.sql"
       dml_path = "../pipelines/sources/c360/src_products/tests/insert_product_raw.sql"
     }
-    "src_loyalty_program": {
+    "loyalty_program_raw": {
       ddl_path = "../pipelines/sources/c360/src_loyalty_program/tests/ddl.loyalty_program_raw.sql"
       dml_path = "../pipelines/sources/c360/src_loyalty_program/tests/insert_loyalty_program_raw.sql"
     }
-    "src_customers": {
+    "customers_raw": {
       ddl_path = "../pipelines/sources/c360/src_customers/tests/ddl.customers_raw.sql"
       dml_path = "../pipelines/sources/c360/src_customers/tests/insert_customers_raw.sql"
     }
-    "src_app_usage": {
+    "app_usage_raw": {
       ddl_path = "../pipelines/sources/c360/src_app_usage/tests/ddl.app_usage_raw.sql"
       dml_path = "../pipelines/sources/c360/src_app_usage/tests/insert_app_usage_raw.sql"
-    }
-    "src_shipments": {
-      ddl_path = "../pipelines/sources/c360/src_shipments/tests/ddl.shipments_raw.sql"
-      dml_path = "../pipelines/sources/c360/src_shipments/tests/insert_shipments_raw.sql"
-    }
-    "src_tracking_events": {
-      ddl_path = "../pipelines/sources/c360/src_tracking_events/tests/ddl.tracking_events_raw.sql"
-      dml_path = "../pipelines/sources/c360/src_tracking_events/tests/insert_tracking_events_raw.sql"
     }
   }
 }

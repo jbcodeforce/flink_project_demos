@@ -19,9 +19,41 @@
         "table_name": "dim_c360_customer_transactions",
         "product_name": "c360",
         "type": "dimension",
-        "dml_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/dml.int_c360_customer_transactions.sql",
-        "ddl_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/ddl.int_c360_customer_transactions.sql",
+        "dml_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/dml.dim_c360_customer_transactions.sql",
+        "ddl_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/ddl.dim_c360_customer_transactions.sql",
         "table_folder_name": "pipelines/dimensions/c360/dim_customer_transactions"
+    },
+    "dim_sdp_estimated_delivery": {
+        "table_name": "dim_sdp_estimated_delivery",
+        "product_name": "sdp",
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/sdp/dim_estimated_delivery/sql-scripts/dml.int_sdp_estimated_delivery.sql",
+        "ddl_ref": "pipelines/dimensions/sdp/dim_estimated_delivery/sql-scripts/ddl.int_sdp_estimated_delivery.sql",
+        "table_folder_name": "pipelines/dimensions/sdp/dim_estimated_delivery"
+    },
+    "dim_sdp_order_fulfillment": {
+        "table_name": "dim_sdp_order_fulfillment",
+        "product_name": "sdp",
+        "type": "dimension",
+        "dml_ref": "pipelines/dimensions/sdp/dim_order_fulfillment/sql-scripts/dml.int_sdp_order_fulfillment.sql",
+        "ddl_ref": "pipelines/dimensions/sdp/dim_order_fulfillment/sql-scripts/ddl.int_sdp_order_fulfillment.sql",
+        "table_folder_name": "pipelines/dimensions/sdp/dim_order_fulfillment"
+    },
+    "sdp_fct_order_fulfillment": {
+        "table_name": "sdp_fct_order_fulfillment",
+        "product_name": "sdp",
+        "type": "fact",
+        "dml_ref": "pipelines/facts/sdp/fct_order_fulfillment/sql-scripts/dml.sdp_fct_order_fulfillment.sql",
+        "ddl_ref": "pipelines/facts/sdp/fct_order_fulfillment/sql-scripts/ddl.sdp_fct_order_fulfillment.sql",
+        "table_folder_name": "pipelines/facts/sdp/fct_order_fulfillment"
+    },
+    "sdp_fulfillment_analytics": {
+        "table_name": "sdp_fulfillment_analytics",
+        "product_name": "sdp",
+        "type": "view",
+        "dml_ref": "pipelines/views/sdp/fulfillment_analytics/sql-scripts/dml.sdp_fulfillment_analytics.sql",
+        "ddl_ref": "pipelines/views/sdp/fulfillment_analytics/sql-scripts/ddl.sdp_fulfillment_analytics.sql",
+        "table_folder_name": "pipelines/views/sdp/fulfillment_analytics"
     },
     "src_c360_app_usage": {
         "table_name": "src_c360_app_usage",
@@ -79,44 +111,20 @@
         "ddl_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/ddl.src_c360_tx_items.sql",
         "table_folder_name": "pipelines/sources/c360/src_tx_items"
     },
-    "src_c360_shipments": {
-        "table_name": "src_c360_shipments",
-        "product_name": "c360",
+    "src_sdp_shipments": {
+        "table_name": "src_sdp_shipments",
+        "product_name": "sdp",
         "type": "source",
-        "dml_ref": "pipelines/sources/c360/src_shipments/sql-scripts/dml.src_c360_shipments.sql",
-        "ddl_ref": "pipelines/sources/c360/src_shipments/sql-scripts/ddl.src_c360_shipments.sql",
-        "table_folder_name": "pipelines/sources/c360/src_shipments"
+        "dml_ref": "pipelines/sources/sdp/src_shipments/sql-scripts/dml.src_sdp_shipments.sql",
+        "ddl_ref": "pipelines/sources/sdp/src_shipments/sql-scripts/ddl.src_sdp_shipments.sql",
+        "table_folder_name": "pipelines/sources/sdp/src_shipments"
     },
-    "src_c360_tracking_events": {
-        "table_name": "src_c360_tracking_events",
-        "product_name": "c360",
+    "src_sdp_tracking_events": {
+        "table_name": "src_sdp_tracking_events",
+        "product_name": "sdp",
         "type": "source",
-        "dml_ref": "pipelines/sources/c360/src_tracking_events/sql-scripts/dml.src_c360_tracking_events.sql",
-        "ddl_ref": "pipelines/sources/c360/src_tracking_events/sql-scripts/ddl.src_c360_tracking_events.sql",
-        "table_folder_name": "pipelines/sources/c360/src_tracking_events"
-    },
-    "dim_c360_order_fulfillment": {
-        "table_name": "dim_c360_order_fulfillment",
-        "product_name": "c360",
-        "type": "dimension",
-        "dml_ref": "pipelines/dimensions/c360/dim_order_fulfillment/sql-scripts/dml.int_c360_order_fulfillment.sql",
-        "ddl_ref": "pipelines/dimensions/c360/dim_order_fulfillment/sql-scripts/ddl.int_c360_order_fulfillment.sql",
-        "table_folder_name": "pipelines/dimensions/c360/dim_order_fulfillment"
-    },
-    "c360_fct_order_fulfillment": {
-        "table_name": "c360_fct_order_fulfillment",
-        "product_name": "c360",
-        "type": "fact",
-        "dml_ref": "pipelines/facts/c360/fct_order_fulfillment/sql-scripts/dml.c360_fct_order_fulfillment.sql",
-        "ddl_ref": "pipelines/facts/c360/fct_order_fulfillment/sql-scripts/ddl.c360_fct_order_fulfillment.sql",
-        "table_folder_name": "pipelines/facts/c360/fct_order_fulfillment"
-    },
-    "fulfillment_analytics_c360": {
-        "table_name": "fulfillment_analytics_c360",
-        "product_name": "c360",
-        "type": "view",
-        "dml_ref": "pipelines/views/c360/fulfillment_analytics_c360/sql-scripts/dml.fulfillment_analytics_c360.sql",
-        "ddl_ref": "pipelines/views/c360/fulfillment_analytics_c360/sql-scripts/ddl.fulfillment_analytics_c360.sql",
-        "table_folder_name": "pipelines/views/c360/fulfillment_analytics_c360"
+        "dml_ref": "pipelines/sources/sdp/src_tracking_events/sql-scripts/dml.src_sdp_tracking_events.sql",
+        "ddl_ref": "pipelines/sources/sdp/src_tracking_events/sql-scripts/ddl.src_sdp_tracking_events.sql",
+        "table_folder_name": "pipelines/sources/sdp/src_tracking_events"
     }
 }
