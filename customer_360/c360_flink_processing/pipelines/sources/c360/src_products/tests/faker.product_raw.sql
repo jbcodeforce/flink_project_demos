@@ -1,0 +1,32 @@
+CREATE TABLE products_raw (
+    product_id STRING,
+    product_name STRING,
+    category STRING,
+    subcategory STRING,
+    brand STRING,
+    price DECIMAL(10, 2),
+    cost DECIMAL(10, 2),
+    weight_kg DECIMAL(10, 3),
+    dimensions STRING,
+    color STRING,
+    size STRING,
+    created_date DATE,
+    status STRING
+) distributed by hash(product_id) into 1 buckets with (
+    'changelog.mode' = 'append',
+'connector' = 'faker',
+'number-of-rows' = '500',
+'fields.product_id.expression' = '#{numerify ''PROD###''}',
+'fields.product_name.expression' = '#{Commerce.productName}',
+'fields.category.expression' = '#{Commerce.department}',
+'fields.subcategory.expression' = '#{Options.option ''Electronics'',''Apparel'',''Home & Garden'',''Sports & Fitness'',''Beauty & Personal Care'',''Toys & Games'',''Books'',''Movies & Music'',''Games'',''Other''}',
+'fields.brand.expression' = '#{Options.option ''RunFast'',''SoundTech'',''BasicWear'',''HydroLife'',''TechGuard'',''ZenFlow'',''BrewMaster'',''WarmCoat'',''GamePro'',''PureGlow'',''CleanSmile'',''CraftLeather'',''SoundWave'',''HomeComfort'',''FitLife'',''BrightWork'',''MuscleFuel'',''FunTime'',''LuxStyle'',''ChefPro'',''StyleVision'',''GreenThumb'',''TechDesk'',''ZenScents'',''Adventure'',''SoundWave'',''HomeComfort'',''FitLife'',''BrightWork'',''MuscleFuel'',''FunTime'',''LuxStyle'',''ChefPro'',''StyleVision'',''GreenThumb'',''TechDesk'',''ZenScents'',''Adventure''}',
+'fields.price.expression' = '#{Number.numberBetween ''10'',''200''}',
+'fields.cost.expression' = '#{Number.numberBetween ''10'',''100''}',
+'fields.weight_kg.expression' = '#{Number.numberBetween ''10'',''100''}',
+'fields.dimensions.expression' = '#{Options.option ''10x10x10 cm'',''20x20x20 cm'',''30x30x30 cm'',''40x40x40 cm'',''50x50x50 cm''}',
+'fields.color.expression' = '#{Options.option ''Red'',''Blue'',''Green'',''Yellow'',''Purple'',''Orange'',''Pink'',''Brown'',''Gray'',''Black'',''White''}',
+'fields.size.expression' = '#{Options.option ''Small'',''Medium'',''Large'',''X-Large'',''XX-Large''}',
+'fields.created_date.expression' = '#{date.past ''30'', ''DAYS''}',
+'fields.status.expression' = '#{Options.option ''active'',''inactive'',''discontinued'',''seasonal''}'
+)

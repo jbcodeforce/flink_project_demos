@@ -45,7 +45,7 @@ transaction_metrics AS (
         COUNT(CASE WHEN TIMESTAMPDIFF(DAY, CAST(transaction_date as TIMESTAMP_LTZ(3)), `$rowtime`) <= 90 THEN 1 END) as transactions_last_90d,
         SUM(CASE WHEN TIMESTAMPDIFF(DAY,  CAST(transaction_date as TIMESTAMP_LTZ(3)), `$rowtime`) <= 90 THEN total_amount ELSE 0 END) as spent_last_90d,
         `$rowtime` as current_ts
-    FROM int_c360_customer_transactions
+    FROM dim_c360_customer_transactions
     GROUP BY customer_id, `$rowtime`
 )
 SELECT 

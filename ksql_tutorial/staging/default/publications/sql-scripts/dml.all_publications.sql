@@ -1,0 +1,1 @@
+INSERT INTO all_publications\ SELECT\   bookid,\   author,\   title\ FROM src_table\ WHERE true

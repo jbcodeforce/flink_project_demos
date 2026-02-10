@@ -19,7 +19,21 @@ with deduplicated_customers as (
         event_ts
     FROM (
         SELECT 
-            *,
+            customer_id,
+            first_name,
+            last_name,
+            email,
+            phone,
+            date_of_birth,
+            gender,
+            registration_date,
+            customer_segment,
+            preferred_channel,
+            address_line1,
+            city,
+            state,
+            zip_code,
+            country,
             `$rowtime` as event_ts, -- propagate src ts to downstream
             ROW_NUMBER() OVER (
                 PARTITION BY customer_id 
