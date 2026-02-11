@@ -1,0 +1,33 @@
+foundations:
+- table_name: src_c360_app_usage
+  ddl_for_test: ./tests/ddl_src_c360_app_usage.sql
+- table_name: src_c360_customers
+  ddl_for_test: ./tests/ddl_src_c360_customers.sql
+- table_name: src_c360_loyalty_program
+  ddl_for_test: ./tests/ddl_src_c360_loyalty_program.sql
+- table_name: src_c360_support_ticket
+  ddl_for_test: ./tests/ddl_src_c360_support_ticket.sql
+- table_name: dim_c360_customer_transactions
+  ddl_for_test: ./tests/ddl_dim_c360_customer_transactions.sql
+test_suite:
+- name: test_c360_fct_customer_profile_1
+  inputs:
+  - table_name: src_c360_app_usage
+    file_name: ./tests/insert_src_c360_app_usage_1.sql
+    file_type: sql
+  - table_name: src_c360_customers
+    file_name: ./tests/insert_src_c360_customers_1.sql
+    file_type: sql
+  - table_name: src_c360_loyalty_program
+    file_name: ./tests/insert_src_c360_loyalty_program_1.sql
+    file_type: sql
+  - table_name: src_c360_support_ticket
+    file_name: ./tests/insert_src_c360_support_ticket_1.sql
+    file_type: sql
+  - table_name: dim_c360_customer_transactions
+    file_name: ./tests/insert_dim_c360_customer_transactions_1.sql
+    file_type: sql
+  outputs:
+  - table_name: c360_fct_customer_profile
+    file_name: ./tests/validate_c360_fct_customer_profile_1.sql
+    file_type: sql

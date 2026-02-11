@@ -1,7 +1,7 @@
 apiVersion: 1
 
 providers:
-- name: 'Flink Example Dashboard'
+- name: 'Flink Dashboard'
   orgId: 1
   folder: ''
   type: file
