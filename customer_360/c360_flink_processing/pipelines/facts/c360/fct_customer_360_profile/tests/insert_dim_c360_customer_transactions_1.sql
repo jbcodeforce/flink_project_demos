@@ -1,7 +1,82 @@
-insert into dim_c360_customer_transactions_ut
-(`customer_id`, `first_name`, `last_name`, `email`, `customer_segment`, `preferred_channel`, `generation_segment`, `age_years`, `days_since_registration`, `transaction_id`, `transaction_date`)
-values
-('customer_id_1', 'first_name_1', 'last_name_1', 'email_1', 'customer_segment_1', 'preferred_channel_1', 'generation_segment_1', 0, 0, 'transaction_id_1', TIMESTAMP '2021-01-01 00:00:00'),
-('customer_id_2', 'first_name_2', 'last_name_2', 'email_2', 'customer_segment_2', 'preferred_channel_2', 'generation_segment_2', 0, 0, 'transaction_id_2', TIMESTAMP '2021-01-01 00:00:00'),
-('customer_id_3', 'first_name_3', 'last_name_3', 'email_3', 'customer_segment_3', 'preferred_channel_3', 'generation_segment_3', 0, 0, 'transaction_id_3', TIMESTAMP '2021-01-01 00:00:00');
-
+INSERT INTO
+  dim_c360_customer_transactions_ut (
+    `customer_id`,
+    `first_name`,
+    `last_name`,
+    `email`,
+    `customer_segment`,
+    `preferred_channel`,
+    `generation_segment`,
+    `age_years`,
+    `days_since_registration`,
+    `transaction_id`,
+    `transaction_date`,
+    `channel`,
+    `channel_group`,
+    `total_amount`,
+    `discount_amount`,
+    `order_size_category`,
+    `items_purchased`,
+    `total_quantity`,
+    `avg_item_price`,
+    `unique_categories`,
+    `unique_brands`,
+    `purchased_category_groups`,
+    `purchased_brands`,
+    `transaction_hour`,
+    `day_of_week`,
+    `transaction_month`,
+    `transaction_quarter`,
+    `transaction_year`,
+    `used_preferred_channel`
+  )
+VALUES
+  (
+    'customer_id_1',
+    'first_name_1',
+    'last_name_1',
+    'email_1',
+    'customer_segment_1',
+    'preferred_channel_1',
+    'generation_segment_1',
+    30,
+    100,
+    'transaction_id_1',
+    TIMESTAMP '2021-01-01 00:00:00',
+    'channel_1',
+    'channel_group_1',
+    120,
+    10,
+    'Small',
+    1,
+    2,
+    7.5
+    1,
+    
+  ),
+  (
+    'customer_id_2',
+    'first_name_2',
+    'last_name_2',
+    'email_2',
+    'customer_segment_2',
+    'preferred_channel_2',
+    'generation_segment_2',
+    0,
+    0,
+    'transaction_id_2',
+    TIMESTAMP '2021-01-01 00:00:00'
+  ),
+  (
+    'customer_id_3',
+    'first_name_3',
+    'last_name_3',
+    'email_3',
+    'customer_segment_3',
+    'preferred_channel_3',
+    'generation_segment_3',
+    0,
+    0,
+    'transaction_id_3',
+    TIMESTAMP '2021-01-01 00:00:00'
+  );

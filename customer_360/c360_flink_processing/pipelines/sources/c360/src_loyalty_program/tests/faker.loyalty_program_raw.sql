@@ -1,3 +1,4 @@
+set 'client.statement-name' = 'insert-app-usage-raw';
 create table loyalty_program_raw (
     customer_id STRING,
     loyalty_tier STRING,

@@ -1,3 +1,4 @@
+set 'client.statement-name' = 'insert-support-ticket-raw';
 create table support_ticket_raw (
     ticket_id STRING,
     customer_id STRING,

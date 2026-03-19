@@ -1,3 +1,4 @@
+set 'client.statement-name' = 'insert-tx-raw';
 create table tx_raw (
     transaction_id STRING,
     customer_id STRING,

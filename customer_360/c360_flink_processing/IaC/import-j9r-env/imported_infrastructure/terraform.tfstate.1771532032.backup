@@ -1,0 +1,2368 @@
+{
+  "version": 4,
+  "terraform_version": "1.14.3",
+  "serial": 0,
+  "lineage": "a50d6a2c-e8d3-e756-840c-555cea86df0b",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "accelerator_16",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "accelerator",
+            "id": "env-2y8vz1",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-2y8vz1",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "astuart_5",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "astuart",
+            "id": "env-9325m7",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-9325m7",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "dominique_12",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Dominique",
+            "id": "env-nx1696",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-nx1696",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "dsp_edge_test_49ac54e0_23",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "dsp-edge-test-49ac54e0",
+            "id": "env-kww5o6",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-kww5o6",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "env_eu_6",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "env_eu",
+            "id": "env-g1ko8m",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-g1ko8m",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "j9r_env_11",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "j9r-env",
+            "id": "env-yk3jm6",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-yk3jm6",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "jcustenborder_17",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "jcustenborder",
+            "id": "env-7dzogo",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-7dzogo",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "jeremy_playground_9",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "jeremy-playground",
+            "id": "env-q6r1wp",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-q6r1wp",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "jsvoboda_19",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "jsvoboda",
+            "id": "env-6wzjxq",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-6wzjxq",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "justin_private_21",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "justin-private",
+            "id": "env-wjzw95",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-wjzw95",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "justin_public_3",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "justin-public",
+            "id": "env-20k0v1",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-20k0v1",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "lorenzo_playground_10",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "lorenzo-playground",
+            "id": "env-wk5yzj",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-wk5yzj",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "mic_18",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "mic",
+            "id": "env-5yyy3g",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-5yyy3g",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "osowski_sandbox_22",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "osowski-sandbox",
+            "id": "env-g5jq91",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-g5jq91",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "qi_7",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Qi",
+            "id": "env-339qvo",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-339qvo",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "sap_datasphere_streaming_15",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "SAP_Datasphere_Streaming",
+            "id": "env-xx8qkq",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-xx8qkq",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "sapintegrationplayground",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "SAPIntegrationPlayground",
+            "id": "env-mzpz7x",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-mzpz7x",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "satakshi_workspace_2",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Satakshi-Workspace",
+            "id": "env-30d332",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-30d332",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "satakshi_workspace_new_4",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Satakshi-Workspace-New",
+            "id": "env-20q1my",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-20q1my",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "schemaregistry_14",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "SchemaRegistry",
+            "id": "env-rj2jp7",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-rj2jp7",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "staging_8",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Staging",
+            "id": "env-6z6xwq",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-6z6xwq",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ESSENTIALS"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "taka_blue_13",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Taka-Blue",
+            "id": "env-m2qz52",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-m2qz52",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_environment",
+      "name": "taka_green_20",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "display_name": "Taka-Green",
+            "id": "env-kk5d72",
+            "resource_name": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-kk5d72",
+            "stream_governance.#": "1",
+            "stream_governance.0.package": "ADVANCED"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "atg_justin_private_enterprise_21",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "lkc-m0xrrw.ap-southeast-1.aws.private.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "atg-justin-private-enterprise",
+            "endpoints.#": "3",
+            "endpoints.0.access_point_id": "PRIVATE_LINK",
+            "endpoints.0.bootstrap_endpoint": "lkc-m0xrrw.ap-southeast-1.aws.private.confluent.cloud:9092",
+            "endpoints.0.connection_type": "PRIVATE_LINK",
+            "endpoints.0.rest_endpoint": "https://lkc-m0xrrw.ap-southeast-1.aws.private.confluent.cloud:443",
+            "endpoints.1.access_point_id": "ap-405z9x",
+            "endpoints.1.bootstrap_endpoint": "lkc-m0xrrw-ap405z9x.ap-southeast-1.aws.accesspoint.glb.confluent.cloud:9092",
+            "endpoints.1.connection_type": "PRIVATE_LINK",
+            "endpoints.1.rest_endpoint": "https://lkc-m0xrrw-ap405z9x.ap-southeast-1.aws.accesspoint.glb.confluent.cloud:443",
+            "endpoints.2.access_point_id": "ap-493w3q",
+            "endpoints.2.bootstrap_endpoint": "lkc-m0xrrw-ap493w3q.ap-southeast-1.aws.accesspoint.glb.confluent.cloud:9092",
+            "endpoints.2.connection_type": "PRIVATE_LINK",
+            "endpoints.2.rest_endpoint": "https://lkc-m0xrrw-ap493w3q.ap-southeast-1.aws.accesspoint.glb.confluent.cloud:443",
+            "enterprise.#": "1",
+            "enterprise.0.max_ecku": "1",
+            "environment.#": "1",
+            "environment.0.id": "env-wjzw95",
+            "freight.#": "0",
+            "id": "lkc-m0xrrw",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-wjzw95/cloud-cluster=lkc-m0xrrw",
+            "region": "ap-southeast-1",
+            "rest_endpoint": "https://lkc-m0xrrw.ap-southeast-1.aws.private.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "atg_justin_private_standard_20",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-312o0.ap-southeast-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "atg-justin-private-standard",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-wjzw95",
+            "freight.#": "0",
+            "id": "lkc-619n3q",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-wjzw95/cloud-cluster=lkc-619n3q",
+            "region": "ap-southeast-1",
+            "rest_endpoint": "https://pkc-312o0.ap-southeast-1.aws.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "atg_justin_public_16",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-312o0.ap-southeast-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "atg-justin-public",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-20k0v1",
+            "freight.#": "0",
+            "id": "lkc-xpkp6z",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-20k0v1/cloud-cluster=lkc-xpkp6z",
+            "region": "ap-southeast-1",
+            "rest_endpoint": "https://pkc-312o0.ap-southeast-1.aws.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "azure_22",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "lkc-vqdo3z.southeastasia.azure.private.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AZURE",
+            "dedicated.#": "0",
+            "display_name": "azure",
+            "endpoints.#": "1",
+            "endpoints.0.access_point_id": "PRIVATE_LINK",
+            "endpoints.0.bootstrap_endpoint": "lkc-vqdo3z.southeastasia.azure.private.confluent.cloud:9092",
+            "endpoints.0.connection_type": "PRIVATE_LINK",
+            "endpoints.0.rest_endpoint": "https://lkc-vqdo3z.southeastasia.azure.private.confluent.cloud:443",
+            "enterprise.#": "1",
+            "enterprise.0.max_ecku": "32",
+            "environment.#": "1",
+            "environment.0.id": "env-wjzw95",
+            "freight.#": "0",
+            "id": "lkc-vqdo3z",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-wjzw95/cloud-cluster=lkc-vqdo3z",
+            "region": "southeastasia",
+            "rest_endpoint": "https://lkc-vqdo3z.southeastasia.azure.private.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "azure_6",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-57q33g.westeurope.azure.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AZURE",
+            "dedicated.#": "0",
+            "display_name": "azure",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-9325m7",
+            "freight.#": "0",
+            "id": "lkc-k3q362",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-9325m7/cloud-cluster=lkc-k3q362",
+            "region": "westeurope",
+            "rest_endpoint": "https://pkc-57q33g.westeurope.azure.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "azure_cluster_12",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-lgwgm.eastus2.azure.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AZURE",
+            "dedicated.#": "0",
+            "display_name": "azure-cluster",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-q6r1wp",
+            "freight.#": "0",
+            "id": "lkc-n7vm5z",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-q6r1wp/cloud-cluster=lkc-n7vm5z",
+            "region": "eastus2",
+            "rest_endpoint": "https://pkc-lgwgm.eastus2.azure.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "bharatpe_9",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-312o0.ap-southeast-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "bharatpe",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-30d332",
+            "freight.#": "0",
+            "id": "lkc-wry9pg",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-30d332/cloud-cluster=lkc-wry9pg",
+            "region": "ap-southeast-1",
+            "rest_endpoint": "https://pkc-312o0.ap-southeast-1.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "bluemelon_returns_demo_19",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-75m1o.europe-west3.gcp.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "GCP",
+            "dedicated.#": "0",
+            "display_name": "BlueMelon_Returns_Demo",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-xx8qkq",
+            "freight.#": "0",
+            "id": "lkc-16z6qv",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-xx8qkq/cloud-cluster=lkc-16z6qv",
+            "region": "europe-west3",
+            "rest_endpoint": "https://pkc-75m1o.europe-west3.gcp.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_0_13",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "cluster_0",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-2y8vz1",
+            "freight.#": "0",
+            "id": "lkc-y0vm8o",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-2y8vz1/cloud-cluster=lkc-y0vm8o",
+            "region": "us-east-2",
+            "rest_endpoint": "https://pkc-921jm.us-east-2.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_0_14",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-n3603.us-central1.gcp.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "GCP",
+            "dedicated.#": "0",
+            "display_name": "cluster_0",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-7dzogo",
+            "freight.#": "0",
+            "id": "lkc-k3vg92",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-7dzogo/cloud-cluster=lkc-k3vg92",
+            "region": "us-central1",
+            "rest_endpoint": "https://pkc-n3603.us-central1.gcp.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_0_24",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-z9doz.eu-west-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "cluster_0",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-wk5yzj",
+            "freight.#": "0",
+            "id": "lkc-9973m7",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-wk5yzj/cloud-cluster=lkc-9973m7",
+            "region": "eu-west-1",
+            "rest_endpoint": "https://pkc-z9doz.eu-west-1.aws.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_0_4",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "cluster_0",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-20q1my",
+            "freight.#": "0",
+            "id": "lkc-3z1vyo",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-20q1my/cloud-cluster=lkc-3z1vyo",
+            "region": "us-east-2",
+            "rest_endpoint": "https://pkc-921jm.us-east-2.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_0_7",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "cluster_0",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-nx1696",
+            "freight.#": "0",
+            "id": "lkc-n0qkjz",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-nx1696/cloud-cluster=lkc-n0qkjz",
+            "region": "us-east-2",
+            "rest_endpoint": "https://pkc-921jm.us-east-2.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_1_11",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-41mxj.uksouth.azure.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AZURE",
+            "dedicated.#": "0",
+            "display_name": "cluster_1",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-9325m7",
+            "freight.#": "0",
+            "id": "lkc-3onrx2",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-9325m7/cloud-cluster=lkc-3onrx2",
+            "region": "uksouth",
+            "rest_endpoint": "https://pkc-41mxj.uksouth.azure.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "cluster_1_5",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-312o0.ap-southeast-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "cluster_1",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-20q1my",
+            "freight.#": "0",
+            "id": "lkc-9m0qjm",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-20q1my/cloud-cluster=lkc-9m0qjm",
+            "region": "ap-southeast-1",
+            "rest_endpoint": "https://pkc-312o0.ap-southeast-1.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "dsp_north_18",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "MULTI_ZONE",
+            "basic.#": "0",
+            "bootstrap_endpoint": "lkc-zoqnk3.eu-north-1.aws.private.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "dsp-north",
+            "endpoints.#": "1",
+            "endpoints.0.access_point_id": "PRIVATE_LINK",
+            "endpoints.0.bootstrap_endpoint": "lkc-zoqnk3.eu-north-1.aws.private.confluent.cloud:9092",
+            "endpoints.0.connection_type": "PRIVATE_LINK",
+            "endpoints.0.rest_endpoint": "https://lkc-zoqnk3.eu-north-1.aws.private.confluent.cloud:443",
+            "enterprise.#": "1",
+            "enterprise.0.max_ecku": "32",
+            "environment.#": "1",
+            "environment.0.id": "env-kww5o6",
+            "freight.#": "0",
+            "id": "lkc-zoqnk3",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-kww5o6/cloud-cluster=lkc-zoqnk3",
+            "region": "eu-north-1",
+            "rest_endpoint": "https://lkc-zoqnk3.eu-north-1.aws.private.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "enablement_cluster_8",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "enablement_cluster",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-kk5d72",
+            "freight.#": "0",
+            "id": "lkc-zvd7y7",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-kk5d72/cloud-cluster=lkc-zvd7y7",
+            "region": "us-east-2",
+            "rest_endpoint": "https://pkc-921jm.us-east-2.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "inventory_10",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "SINGLE_ZONE",
+            "basic.#": "0",
+            "bootstrap_endpoint": "lkc-88qoq5-g0d4em.us-east-2.aws.glb.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "1",
+            "dedicated.0.cku": "1",
+            "dedicated.0.encryption_key": "",
+            "dedicated.0.zones.#": "1",
+            "dedicated.0.zones.0": "use2-az1",
+            "display_name": "inventory",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-6z6xwq",
+            "freight.#": "0",
+            "id": "lkc-88qoq5",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "n-g0d4em",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-6z6xwq/cloud-cluster=lkc-88qoq5",
+            "region": "us-east-2",
+            "rest_endpoint": "https://lkc-88qoq5-g0d4em.us-east-2.aws.glb.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "j9r_kafka_17",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "SINGLE_ZONE",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-rgm37.us-west-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "j9r-kafka",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-yk3jm6",
+            "freight.#": "0",
+            "id": "lkc-7v233w",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-yk3jm6/cloud-cluster=lkc-7v233w",
+            "region": "us-west-2",
+            "rest_endpoint": "https://pkc-rgm37.us-west-2.aws.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "jans_aws_frankfurt_25",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-7xoy1.eu-central-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "jans_aws_frankfurt",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-6wzjxq",
+            "freight.#": "0",
+            "id": "lkc-n79zpk",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-6wzjxq/cloud-cluster=lkc-n79zpk",
+            "region": "eu-central-1",
+            "rest_endpoint": "https://pkc-7xoy1.eu-central-1.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "sap_datasphere_xperryment_2",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-7xoy1.eu-central-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "SAP_Datasphere_Xperryment",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-xx8qkq",
+            "freight.#": "0",
+            "id": "lkc-qnj6o6",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-xx8qkq/cloud-cluster=lkc-qnj6o6",
+            "region": "eu-central-1",
+            "rest_endpoint": "https://pkc-7xoy1.eu-central-1.aws.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "sap_s4hana_faa_integration_cluster_15",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-mz3gw.westus3.azure.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AZURE",
+            "dedicated.#": "0",
+            "display_name": "SAP_S4HANA_FAA_Integration_Cluster",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-mzpz7x",
+            "freight.#": "0",
+            "id": "lkc-3ppx6j",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-mzpz7x/cloud-cluster=lkc-3ppx6j",
+            "region": "westus3",
+            "rest_endpoint": "https://pkc-mz3gw.westus3.azure.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "sap_s4hana_onibex_oneconnect",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "0",
+            "bootstrap_endpoint": "SASL_SSL://pkc-7xoy1.eu-central-1.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "sap_s4hana_onibex_oneconnect",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-mzpz7x",
+            "freight.#": "0",
+            "id": "lkc-368vym",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-mzpz7x/cloud-cluster=lkc-368vym",
+            "region": "eu-central-1",
+            "rest_endpoint": "https://pkc-7xoy1.eu-central-1.aws.confluent.cloud:443",
+            "standard.#": "1",
+            "standard.0.max_ecku": "10"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "swiggy_23",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "swiggy",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-30d332",
+            "freight.#": "0",
+            "id": "lkc-dq19d7",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-30d332/cloud-cluster=lkc-dq19d7",
+            "region": "us-east-2",
+            "rest_endpoint": "https://pkc-921jm.us-east-2.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_kafka_cluster",
+      "name": "teladoc_3",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes_flat": {
+            "api_version": "cmk/v2",
+            "availability": "LOW",
+            "basic.#": "1",
+            "basic.0.max_ecku": "50",
+            "bootstrap_endpoint": "SASL_SSL://pkc-921jm.us-east-2.aws.confluent.cloud:9092",
+            "byok_key.#": "1",
+            "byok_key.0.id": "",
+            "cloud": "AWS",
+            "dedicated.#": "0",
+            "display_name": "teladoc",
+            "endpoints.#": "0",
+            "enterprise.#": "0",
+            "environment.#": "1",
+            "environment.0.id": "env-30d332",
+            "freight.#": "0",
+            "id": "lkc-omxk9y",
+            "kind": "Cluster",
+            "network.#": "1",
+            "network.0.id": "",
+            "rbac_crn": "crn://confluent.cloud/organization=49cee212-6346-438a-a1fa-d1b1cbd90d44/environment=env-30d332/cloud-cluster=lkc-omxk9y",
+            "region": "us-east-2",
+            "rest_endpoint": "https://pkc-921jm.us-east-2.aws.confluent.cloud:443",
+            "standard.#": "0"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoyNTkyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MjU5MjAwMDAwMDAwMDAwfX0="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "app_connector_42",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to manage Kafka connectors",
+            "display_name": "app-connector",
+            "id": "sa-qdjxkm",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "app_consumer_19",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to consume from 'orders' topic of 'inventory' Kafka cluster",
+            "display_name": "app-consumer",
+            "id": "sa-57zgd0g",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "app_manager_29",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to manage Kafka cluster",
+            "display_name": "app-manager",
+            "id": "sa-7xq8vj",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "app_manager_dev_36",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account for managing Kafka resources",
+            "display_name": "app-manager-dev",
+            "id": "sa-v7kq9z0",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "app_producer_20",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to produce to 'orders' topic of 'inventory' Kafka cluster",
+            "display_name": "app-producer",
+            "id": "sa-6kzp6mj",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "astuart_demo_deployer_24",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "deploy demos for astuart",
+            "display_name": "astuart_demo_deployer",
+            "id": "sa-q26xyj2",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "astuart_tf_25",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "tf for astuar",
+            "display_name": "astuart_TF",
+            "id": "sa-mvxw802",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "bluemelon_sap_datasphere_sa_35",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for SAP Datasphere in BlueMelon Product Returns demo.",
+            "display_name": "bluemelon-sap-datasphere-sa",
+            "id": "sa-vdw3rn",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "dsp_north_admin_12",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account for managing dsp-north cluster",
+            "display_name": "dsp-north-admin",
+            "id": "sa-mvomnnq",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "healthplus_1729002926838_43",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "SA for Health+",
+            "display_name": "HealthPlus.1729002926838",
+            "id": "sa-q35r5m",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "j9r_env_manager_44",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to manage j9r environment",
+            "display_name": "j9r-env-manager",
+            "id": "sa-7vvrvw",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "j9r_fd_sa_41",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to deploy Flink statements in the environment",
+            "display_name": "j9r-fd-sa",
+            "id": "sa-rrxj1y1",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "j9r_flink_app_14",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account as which Flink statements run in the environment",
+            "display_name": "j9r-flink-app",
+            "id": "sa-111z1z",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "j9r_kafka_mgr_40",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to manage 'standard' Kafka cluster",
+            "display_name": "j9r-kafka-mgr",
+            "id": "sa-nvqk9mz",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "justin_connect_39",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "",
+            "display_name": "justin-connect",
+            "id": "sa-v7z595p",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "justin_datagen_15",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "",
+            "display_name": "justin-datagen",
+            "id": "sa-z2z22z",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "justin_flink_sa_8",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "orgadmin sa for flink",
+            "display_name": "justin-flink-sa",
+            "id": "sa-62q8r8",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "justin_tableflow_31",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "",
+            "display_name": "justin-tableflow",
+            "id": "sa-2mgdvo",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "justin_usm_23",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "justin-usm-testing",
+            "display_name": "justin-usm",
+            "id": "sa-228gpky",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "kafka_sa_34",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "A service account for app to access kafka cluster",
+            "display_name": "kafka-sa",
+            "id": "sa-62qmx8",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "lorenzo_playground_crm_2",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "SA for Cloud Resource Management on Lorenzo's playground",
+            "display_name": "Lorenzo-playground-CRM",
+            "id": "sa-0x2652p",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "lorenzo_playground_terraform_5",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "SA for Terraform on Lorenzo's playground",
+            "display_name": "Lorenzo-playground-Terraform",
+            "id": "sa-0x2yo32",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "lorenzo_tf_app_manager_6",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Lorenzo playground - TF app-manager",
+            "display_name": "lorenzo-tf-app-manager",
+            "id": "sa-xq803nx",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "lorenzo_tf_platform_manager_28",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Lorenzo playground - TF platform-manager",
+            "display_name": "lorenzo-tf-platform-manager",
+            "id": "sa-nvq1gk3",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "lorenzo_tf_statements_runner_33",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Lorenzo playground - TF statements-runner",
+            "display_name": "lorenzo-tf-statements-runner",
+            "id": "sa-81p738r",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "ntwk_experiments_aws_app_manager_45",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to manage Kafka cluster",
+            "display_name": "ntwk_experiments_aws_app-manager",
+            "id": "sa-577532q",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_082495df_37",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_082495df",
+            "id": "sa-v7z5r20",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_45d510d4_26",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_45d510d4",
+            "id": "sa-pg338dk",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_552b403f_27",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_552b403f",
+            "id": "sa-gq77gon",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_a9588c1f_30",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_a9588c1f",
+            "id": "sa-nzkpnz",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_adbe2778_38",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_adbe2778",
+            "id": "sa-6k1z3v8",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_e0837f07_18",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_e0837f07",
+            "id": "sa-w7jrndj",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_datagensource_eb0c9921_7",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for DatagenSource",
+            "display_name": "SA_DatagenSource_eb0c9921",
+            "id": "sa-7xqx62",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_terraform_22",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account for Terraform",
+            "display_name": "sa-terraform",
+            "id": "sa-xg2gzx",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sa_terraform_bot_21",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service Account to be used by Terraform provider that invokes the Control Plane REST APIs.",
+            "display_name": "sa-terraform-bot",
+            "id": "sa-78zk0o",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sgws_cpi_11",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Test account for SGWS SAP Cloud Integration with limited access rights",
+            "display_name": "SGWS_CPI",
+            "id": "sa-o3kkdj9",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "sraj_test",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "srajtest",
+            "display_name": "sraj-test",
+            "id": "sa-q2qkxv7",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "streaming_agents_setup_sa_147235_4",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account for streaming-agents streaming agents setup",
+            "display_name": "streaming-agents-setup-sa-147235",
+            "id": "sa-xqzw1nq",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "taka_connectors_sa_16",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "",
+            "display_name": "taka-connectors-sa",
+            "id": "sa-yom697k",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "taka_flink_workshop_3",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "APIKey used by Taka to run the Flink Workshop.",
+            "display_name": "taka-flink-workshop",
+            "id": "sa-7wdygw",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "taka_general_tests_with_terraform_10",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "",
+            "display_name": "taka-general-tests-with-terraform",
+            "id": "sa-6kkgn98",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "taka_training_sa_13",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account used by Taka during training.",
+            "display_name": "taka-training-sa",
+            "id": "sa-3p370j",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "test_cpi_17",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "CPI test account`",
+            "display_name": "test_cpi",
+            "id": "sa-pgw35jo",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "txp_app_manager_69025db6_32",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account for managing CDC resources",
+            "display_name": "txp-app-manager-69025db6",
+            "id": "sa-81od0m0",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "confluent_service_account",
+      "name": "xperryment_sap_datasphere_sa_9",
+      "provider": "provider[\"registry.terraform.io/-/confluent\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes_flat": {
+            "api_version": "iam/v2",
+            "description": "Service account to be used by SAP Datasphere data connections, with minimal RBAC required by SAP Datasphere",
+            "display_name": "xperryment_sap_datasphere_sa",
+            "id": "sa-5k5znz",
+            "kind": "ServiceAccount"
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}

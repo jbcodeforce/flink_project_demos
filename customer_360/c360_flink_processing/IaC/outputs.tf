@@ -105,3 +105,10 @@ output "tableflow_api_secret" {
   sensitive   = true
 }
 
+output "flink_rest_endpoint" {
+  description = "Flink REST endpointt"
+  value       = data.confluent_flink_region.main.rest_endpoint
+  sensitive   = false
+}
+
+
