@@ -1,0 +1,1 @@
+rm -r  pipelines/sources/abc/

@@ -1,0 +1,206 @@
+{
+   "table_name": "tracking_events_raw",
+   "product_name": "seeds",
+   "type": "seed",
+   "dml_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/dml.tracking_events_raw.sql",
+   "ddl_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/ddl.tracking_events_raw.sql",
+   "path": "pipelines/seeds/tracking_events_raw",
+   "kafka_topic": null,
+   "complexity": {
+      "number_of_regular_joins": 0,
+      "number_of_left_joins": 0,
+      "number_of_right_joins": 0,
+      "number_of_inner_joins": 0,
+      "number_of_outer_joins": 0,
+      "complexity_type": "Simple",
+      "state_form": "Stateless"
+   },
+   "parents": [
+      {
+         "table_name": "warehouse",
+         "product_name": "seeds",
+         "type": "external_kafka",
+         "dml_ref": "",
+         "ddl_ref": "",
+         "path": "pipelines/seeds/warehouse",
+         "kafka_topic": "warehouse",
+         "complexity": {
+            "number_of_regular_joins": 0,
+            "number_of_left_joins": 0,
+            "number_of_right_joins": 0,
+            "number_of_inner_joins": 0,
+            "number_of_outer_joins": 0,
+            "complexity_type": "Simple",
+            "state_form": "Stateless"
+         },
+         "parents": [],
+         "children": [
+            {
+               "table_name": "tracking_events_raw",
+               "product_name": "seeds",
+               "type": "seed",
+               "dml_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/dml.tracking_events_raw.sql",
+               "ddl_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/ddl.tracking_events_raw.sql",
+               "path": "pipelines/seeds/tracking_events_raw",
+               "kafka_topic": null,
+               "complexity": {
+                  "number_of_regular_joins": 0,
+                  "number_of_left_joins": 0,
+                  "number_of_right_joins": 0,
+                  "number_of_inner_joins": 0,
+                  "number_of_outer_joins": 0,
+                  "complexity_type": "Simple",
+                  "state_form": "Stateless"
+               },
+               "parents": [],
+               "children": []
+            }
+         ]
+      },
+      {
+         "table_name": "origin",
+         "product_name": "seeds",
+         "type": "external_kafka",
+         "dml_ref": "",
+         "ddl_ref": "",
+         "path": "pipelines/seeds/origin",
+         "kafka_topic": "origin",
+         "complexity": {
+            "number_of_regular_joins": 0,
+            "number_of_left_joins": 0,
+            "number_of_right_joins": 0,
+            "number_of_inner_joins": 0,
+            "number_of_outer_joins": 0,
+            "complexity_type": "Simple",
+            "state_form": "Stateless"
+         },
+         "parents": [],
+         "children": [
+            {
+               "table_name": "tracking_events_raw",
+               "product_name": "seeds",
+               "type": "seed",
+               "dml_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/dml.tracking_events_raw.sql",
+               "ddl_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/ddl.tracking_events_raw.sql",
+               "path": "pipelines/seeds/tracking_events_raw",
+               "kafka_topic": null,
+               "complexity": {
+                  "number_of_regular_joins": 0,
+                  "number_of_left_joins": 0,
+                  "number_of_right_joins": 0,
+                  "number_of_inner_joins": 0,
+                  "number_of_outer_joins": 0,
+                  "complexity_type": "Simple",
+                  "state_form": "Stateless"
+               },
+               "parents": [],
+               "children": []
+            }
+         ]
+      },
+      {
+         "table_name": "sort",
+         "product_name": "seeds",
+         "type": "external_kafka",
+         "dml_ref": "",
+         "ddl_ref": "",
+         "path": "pipelines/seeds/sort",
+         "kafka_topic": "sort",
+         "complexity": {
+            "number_of_regular_joins": 0,
+            "number_of_left_joins": 0,
+            "number_of_right_joins": 0,
+            "number_of_inner_joins": 0,
+            "number_of_outer_joins": 0,
+            "complexity_type": "Simple",
+            "state_form": "Stateless"
+         },
+         "parents": [],
+         "children": [
+            {
+               "table_name": "tracking_events_raw",
+               "product_name": "seeds",
+               "type": "seed",
+               "dml_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/dml.tracking_events_raw.sql",
+               "ddl_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/ddl.tracking_events_raw.sql",
+               "path": "pipelines/seeds/tracking_events_raw",
+               "kafka_topic": null,
+               "complexity": {
+                  "number_of_regular_joins": 0,
+                  "number_of_left_joins": 0,
+                  "number_of_right_joins": 0,
+                  "number_of_inner_joins": 0,
+                  "number_of_outer_joins": 0,
+                  "complexity_type": "Simple",
+                  "state_form": "Stateless"
+               },
+               "parents": [],
+               "children": []
+            }
+         ]
+      },
+      {
+         "table_name": "store",
+         "product_name": "seeds",
+         "type": "external_kafka",
+         "dml_ref": "",
+         "ddl_ref": "",
+         "path": "pipelines/seeds/store",
+         "kafka_topic": "store",
+         "complexity": {
+            "number_of_regular_joins": 0,
+            "number_of_left_joins": 0,
+            "number_of_right_joins": 0,
+            "number_of_inner_joins": 0,
+            "number_of_outer_joins": 0,
+            "complexity_type": "Simple",
+            "state_form": "Stateless"
+         },
+         "parents": [],
+         "children": [
+            {
+               "table_name": "tracking_events_raw",
+               "product_name": "seeds",
+               "type": "seed",
+               "dml_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/dml.tracking_events_raw.sql",
+               "ddl_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/ddl.tracking_events_raw.sql",
+               "path": "pipelines/seeds/tracking_events_raw",
+               "kafka_topic": null,
+               "complexity": {
+                  "number_of_regular_joins": 0,
+                  "number_of_left_joins": 0,
+                  "number_of_right_joins": 0,
+                  "number_of_inner_joins": 0,
+                  "number_of_outer_joins": 0,
+                  "complexity_type": "Simple",
+                  "state_form": "Stateless"
+               },
+               "parents": [],
+               "children": []
+            }
+         ]
+      }
+   ],
+   "children": [
+      {
+         "table_name": "src_sdp_tracking_events",
+         "product_name": "sdp",
+         "type": "source",
+         "dml_ref": "pipelines/sources/sdp/src_tracking_events/sql-scripts/dml.src_sdp_tracking_events.sql",
+         "ddl_ref": "pipelines/sources/sdp/src_tracking_events/sql-scripts/ddl.src_sdp_tracking_events.sql",
+         "path": "pipelines/sources/sdp/src_tracking_events",
+         "kafka_topic": null,
+         "complexity": {
+            "number_of_regular_joins": 0,
+            "number_of_left_joins": 0,
+            "number_of_right_joins": 0,
+            "number_of_inner_joins": 0,
+            "number_of_outer_joins": 0,
+            "complexity_type": "Simple",
+            "state_form": "Stateful"
+         },
+         "parents": [],
+         "children": []
+      }
+   ]
+}

@@ -1,0 +1,41 @@
+{
+   "table_name": "customers_raw",
+   "product_name": "seeds",
+   "type": "seed",
+   "dml_ref": "pipelines/seeds/customers_raw/sql-scripts/dml.customers_raw.sql",
+   "ddl_ref": "pipelines/seeds/customers_raw/sql-scripts/ddl.customers_raw.sql",
+   "path": "pipelines/seeds/customers_raw",
+   "kafka_topic": null,
+   "complexity": {
+      "number_of_regular_joins": 0,
+      "number_of_left_joins": 0,
+      "number_of_right_joins": 0,
+      "number_of_inner_joins": 0,
+      "number_of_outer_joins": 0,
+      "complexity_type": "Simple",
+      "state_form": "Stateless"
+   },
+   "parents": [],
+   "children": [
+      {
+         "table_name": "src_c360_customers",
+         "product_name": "c360",
+         "type": "source",
+         "dml_ref": "pipelines/sources/c360/src_customers/sql-scripts/dml.src_c360_customers.sql",
+         "ddl_ref": "pipelines/sources/c360/src_customers/sql-scripts/ddl.src_c360_customers.sql",
+         "path": "pipelines/sources/c360/src_customers",
+         "kafka_topic": null,
+         "complexity": {
+            "number_of_regular_joins": 0,
+            "number_of_left_joins": 0,
+            "number_of_right_joins": 0,
+            "number_of_inner_joins": 0,
+            "number_of_outer_joins": 0,
+            "complexity_type": "Simple",
+            "state_form": "Stateful"
+         },
+         "parents": [],
+         "children": []
+      }
+   ]
+}

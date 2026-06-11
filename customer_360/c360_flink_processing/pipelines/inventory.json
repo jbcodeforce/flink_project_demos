@@ -1,11 +1,21 @@
 {
+    "app_usage_raw": {
+        "table_name": "app_usage_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/app_usage_raw/sql-scripts/dml.app_usage_raw.sql",
+        "ddl_ref": "pipelines/seeds/app_usage_raw/sql-scripts/ddl.app_usage_raw.sql",
+        "table_folder_name": "pipelines/seeds/app_usage_raw",
+        "kafka_topic": null
+    },
     "c360_fct_customer_profile": {
         "table_name": "c360_fct_customer_profile",
         "product_name": "c360",
         "type": "fact",
         "dml_ref": "pipelines/facts/c360/fct_customer_360_profile/sql-scripts/dml.c360_fct_customer_profile.sql",
         "ddl_ref": "pipelines/facts/c360/fct_customer_360_profile/sql-scripts/ddl.c360_fct_customer_profile.sql",
-        "table_folder_name": "pipelines/facts/c360/fct_customer_360_profile"
+        "table_folder_name": "pipelines/facts/c360/fct_customer_360_profile",
+        "kafka_topic": null
     },
     "customer_analytics_c360": {
         "table_name": "customer_analytics_c360",
@@ -13,7 +23,17 @@
         "type": "view",
         "dml_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/dml.customer_analytics_c360.sql",
         "ddl_ref": "pipelines/views/c360/customer_analytics_c360/sql-scripts/ddl.customer_analytics_c360.sql",
-        "table_folder_name": "pipelines/views/c360/customer_analytics_c360"
+        "table_folder_name": "pipelines/views/c360/customer_analytics_c360",
+        "kafka_topic": null
+    },
+    "customers_raw": {
+        "table_name": "customers_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/customers_raw/sql-scripts/dml.customers_raw.sql",
+        "ddl_ref": "pipelines/seeds/customers_raw/sql-scripts/ddl.customers_raw.sql",
+        "table_folder_name": "pipelines/seeds/customers_raw",
+        "kafka_topic": null
     },
     "dim_c360_customer_transactions": {
         "table_name": "dim_c360_customer_transactions",
@@ -21,7 +41,8 @@
         "type": "dimension",
         "dml_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/dml.dim_c360_customer_transactions.sql",
         "ddl_ref": "pipelines/dimensions/c360/dim_customer_transactions/sql-scripts/ddl.dim_c360_customer_transactions.sql",
-        "table_folder_name": "pipelines/dimensions/c360/dim_customer_transactions"
+        "table_folder_name": "pipelines/dimensions/c360/dim_customer_transactions",
+        "kafka_topic": null
     },
     "dim_sdp_estimated_delivery": {
         "table_name": "dim_sdp_estimated_delivery",
@@ -29,7 +50,8 @@
         "type": "dimension",
         "dml_ref": "pipelines/dimensions/sdp/dim_estimated_delivery/sql-scripts/dml.int_sdp_estimated_delivery.sql",
         "ddl_ref": "pipelines/dimensions/sdp/dim_estimated_delivery/sql-scripts/ddl.int_sdp_estimated_delivery.sql",
-        "table_folder_name": "pipelines/dimensions/sdp/dim_estimated_delivery"
+        "table_folder_name": "pipelines/dimensions/sdp/dim_estimated_delivery",
+        "kafka_topic": null
     },
     "dim_sdp_order_fulfillment": {
         "table_name": "dim_sdp_order_fulfillment",
@@ -37,7 +59,26 @@
         "type": "dimension",
         "dml_ref": "pipelines/dimensions/sdp/dim_order_fulfillment/sql-scripts/dml.int_sdp_order_fulfillment.sql",
         "ddl_ref": "pipelines/dimensions/sdp/dim_order_fulfillment/sql-scripts/ddl.int_sdp_order_fulfillment.sql",
-        "table_folder_name": "pipelines/dimensions/sdp/dim_order_fulfillment"
+        "table_folder_name": "pipelines/dimensions/sdp/dim_order_fulfillment",
+        "kafka_topic": null
+    },
+    "loyalty_program_raw": {
+        "table_name": "loyalty_program_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/loyalty_program_raw/sql-scripts/dml.loyalty_program_raw.sql",
+        "ddl_ref": "pipelines/seeds/loyalty_program_raw/sql-scripts/ddl.loyalty_program_raw.sql",
+        "table_folder_name": "pipelines/seeds/loyalty_program_raw",
+        "kafka_topic": null
+    },
+    "products_raw": {
+        "table_name": "products_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/products_raw/sql-scripts/dml.products_raw.sql",
+        "ddl_ref": "pipelines/seeds/products_raw/sql-scripts/ddl.products_raw.sql",
+        "table_folder_name": "pipelines/seeds/products_raw",
+        "kafka_topic": null
     },
     "sdp_fct_order_fulfillment": {
         "table_name": "sdp_fct_order_fulfillment",
@@ -45,7 +86,8 @@
         "type": "fact",
         "dml_ref": "pipelines/facts/sdp/fct_order_fulfillment/sql-scripts/dml.sdp_fct_order_fulfillment.sql",
         "ddl_ref": "pipelines/facts/sdp/fct_order_fulfillment/sql-scripts/ddl.sdp_fct_order_fulfillment.sql",
-        "table_folder_name": "pipelines/facts/sdp/fct_order_fulfillment"
+        "table_folder_name": "pipelines/facts/sdp/fct_order_fulfillment",
+        "kafka_topic": null
     },
     "sdp_fulfillment_analytics": {
         "table_name": "sdp_fulfillment_analytics",
@@ -53,7 +95,26 @@
         "type": "view",
         "dml_ref": "pipelines/views/sdp/fulfillment_analytics/sql-scripts/dml.sdp_fulfillment_analytics.sql",
         "ddl_ref": "pipelines/views/sdp/fulfillment_analytics/sql-scripts/ddl.sdp_fulfillment_analytics.sql",
-        "table_folder_name": "pipelines/views/sdp/fulfillment_analytics"
+        "table_folder_name": "pipelines/views/sdp/fulfillment_analytics",
+        "kafka_topic": null
+    },
+    "shipments_raw": {
+        "table_name": "shipments_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/shipment_raw/sql-scripts/dml.shipments_raw.sql",
+        "ddl_ref": "pipelines/seeds/shipment_raw/sql-scripts/ddl.shipments_raw.sql",
+        "table_folder_name": "pipelines/seeds/shipment_raw",
+        "kafka_topic": null
+    },
+    "src_abc_shipments": {
+        "table_name": "src_abc_shipments",
+        "product_name": "abc",
+        "type": "source",
+        "dml_ref": "pipelines/sources/abc/src_shipments/sql-scripts/dml.src_abc_shipments.sql",
+        "ddl_ref": "pipelines/sources/abc/src_shipments/sql-scripts/ddl.src_abc_shipments.sql",
+        "table_folder_name": "pipelines/sources/abc/src_shipments",
+        "kafka_topic": null
     },
     "src_c360_app_usage": {
         "table_name": "src_c360_app_usage",
@@ -61,7 +122,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_app_usage/sql-scripts/dml.src_c360_app_usage.sql",
         "ddl_ref": "pipelines/sources/c360/src_app_usage/sql-scripts/ddl.src_c360_app_usage.sql",
-        "table_folder_name": "pipelines/sources/c360/src_app_usage"
+        "table_folder_name": "pipelines/sources/c360/src_app_usage",
+        "kafka_topic": null
     },
     "src_c360_customers": {
         "table_name": "src_c360_customers",
@@ -69,7 +131,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_customers/sql-scripts/dml.src_c360_customers.sql",
         "ddl_ref": "pipelines/sources/c360/src_customers/sql-scripts/ddl.src_c360_customers.sql",
-        "table_folder_name": "pipelines/sources/c360/src_customers"
+        "table_folder_name": "pipelines/sources/c360/src_customers",
+        "kafka_topic": null
     },
     "src_c360_loyalty_program": {
         "table_name": "src_c360_loyalty_program",
@@ -77,7 +140,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_loyalty_program/sql-scripts/dml.src_c360_loyalty_program.sql",
         "ddl_ref": "pipelines/sources/c360/src_loyalty_program/sql-scripts/ddl.src_c360_loyalty_program.sql",
-        "table_folder_name": "pipelines/sources/c360/src_loyalty_program"
+        "table_folder_name": "pipelines/sources/c360/src_loyalty_program",
+        "kafka_topic": null
     },
     "src_c360_products": {
         "table_name": "src_c360_products",
@@ -85,7 +149,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_products/sql-scripts/dml.src_c360_products.sql",
         "ddl_ref": "pipelines/sources/c360/src_products/sql-scripts/ddl.src_c360_products.sql",
-        "table_folder_name": "pipelines/sources/c360/src_products"
+        "table_folder_name": "pipelines/sources/c360/src_products",
+        "kafka_topic": null
     },
     "src_c360_support_ticket": {
         "table_name": "src_c360_support_ticket",
@@ -93,7 +158,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_support_ticket/sql-scripts/dml.src_c360_support_ticket.sql",
         "ddl_ref": "pipelines/sources/c360/src_support_ticket/sql-scripts/ddl.src_c360_support_ticket.sql",
-        "table_folder_name": "pipelines/sources/c360/src_support_ticket"
+        "table_folder_name": "pipelines/sources/c360/src_support_ticket",
+        "kafka_topic": null
     },
     "src_c360_transactions": {
         "table_name": "src_c360_transactions",
@@ -101,7 +167,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_transactions/sql-scripts/dml.src_c360_transactions.sql",
         "ddl_ref": "pipelines/sources/c360/src_transactions/sql-scripts/ddl.src_c360_transactions.sql",
-        "table_folder_name": "pipelines/sources/c360/src_transactions"
+        "table_folder_name": "pipelines/sources/c360/src_transactions",
+        "kafka_topic": null
     },
     "src_c360_tx_items": {
         "table_name": "src_c360_tx_items",
@@ -109,7 +176,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/dml.src_c360_tx_items.sql",
         "ddl_ref": "pipelines/sources/c360/src_tx_items/sql-scripts/ddl.src_c360_tx_items.sql",
-        "table_folder_name": "pipelines/sources/c360/src_tx_items"
+        "table_folder_name": "pipelines/sources/c360/src_tx_items",
+        "kafka_topic": null
     },
     "src_sdp_shipments": {
         "table_name": "src_sdp_shipments",
@@ -117,7 +185,8 @@
         "type": "source",
         "dml_ref": "pipelines/sources/sdp/src_shipments/sql-scripts/dml.src_sdp_shipments.sql",
         "ddl_ref": "pipelines/sources/sdp/src_shipments/sql-scripts/ddl.src_sdp_shipments.sql",
-        "table_folder_name": "pipelines/sources/sdp/src_shipments"
+        "table_folder_name": "pipelines/sources/sdp/src_shipments",
+        "kafka_topic": null
     },
     "src_sdp_tracking_events": {
         "table_name": "src_sdp_tracking_events",
@@ -125,6 +194,43 @@
         "type": "source",
         "dml_ref": "pipelines/sources/sdp/src_tracking_events/sql-scripts/dml.src_sdp_tracking_events.sql",
         "ddl_ref": "pipelines/sources/sdp/src_tracking_events/sql-scripts/ddl.src_sdp_tracking_events.sql",
-        "table_folder_name": "pipelines/sources/sdp/src_tracking_events"
+        "table_folder_name": "pipelines/sources/sdp/src_tracking_events",
+        "kafka_topic": null
+    },
+    "support_ticket_raw": {
+        "table_name": "support_ticket_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/support_ticket_raw/sql-scripts/dml.support_ticket_raw.sql",
+        "ddl_ref": "pipelines/seeds/support_ticket_raw/sql-scripts/ddl.support_ticket_raw.sql",
+        "table_folder_name": "pipelines/seeds/support_ticket_raw",
+        "kafka_topic": null
+    },
+    "tracking_events_raw": {
+        "table_name": "tracking_events_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/dml.tracking_events_raw.sql",
+        "ddl_ref": "pipelines/seeds/tracking_events_raw/sql-scripts/ddl.tracking_events_raw.sql",
+        "table_folder_name": "pipelines/seeds/tracking_events_raw",
+        "kafka_topic": null
+    },
+    "transaction_items_raw": {
+        "table_name": "transaction_items_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/transaction_items_raw/sql-scripts/dml.transaction_items_raw.sql",
+        "ddl_ref": "pipelines/seeds/transaction_items_raw/sql-scripts/ddl.transaction_items_raw.sql",
+        "table_folder_name": "pipelines/seeds/transaction_items_raw",
+        "kafka_topic": null
+    },
+    "tx_raw": {
+        "table_name": "tx_raw",
+        "product_name": "seeds",
+        "type": "seed",
+        "dml_ref": "pipelines/seeds/tx_raw/sql-scripts/dml.tx_raw.sql",
+        "ddl_ref": "pipelines/seeds/tx_raw/sql-scripts/ddl.tx_raw.sql",
+        "table_folder_name": "pipelines/seeds/tx_raw",
+        "kafka_topic": null
     }
 }

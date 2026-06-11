@@ -10,8 +10,6 @@ CREATE TABLE IF NOT EXISTS src_sdp_tracking_events (
 ) DISTRIBUTED BY HASH(event_id) INTO 1 BUCKETS
 WITH (
   'changelog.mode' = 'upsert',
-  'key.avro-registry.schema-context' = '.flink-dev',
-  'value.avro-registry.schema-context' = '.flink-dev',
   'key.format' = 'avro-registry',
   'value.format' = 'avro-registry',
   'kafka.retention.time' = '0',
