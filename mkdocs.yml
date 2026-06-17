@@ -5,7 +5,6 @@ copyright: Copyright &copy; 2025 Jerome Boyer
 nav:
   - Context:
     - Introduction: index.md
-    - Ksql sources: ksql/index.md
   - Customer 360:
     - Introduction: c360/index.md
     - Data Model: c360/data_models.md
