@@ -1,0 +1,113 @@
+version: 2
+models:
+- name: customer_analytics_c360
+  description: Migrated from dml.customer_analytics_c360.sql
+  columns:
+  - name: customer_id
+    data_type: VARCHAR
+  - name: first_name
+    data_type: VARCHAR
+  - name: last_name
+    data_type: VARCHAR
+  - name: email
+    data_type: VARCHAR
+  - name: customer_segment
+    data_type: VARCHAR
+  - name: preferred_channel
+    data_type: VARCHAR
+  - name: generation_segment
+    data_type: VARCHAR
+  - name: age_years
+    data_type: BIGINT
+  - name: city
+    data_type: VARCHAR
+  - name: state
+    data_type: VARCHAR
+  - name: country
+    data_type: VARCHAR
+  - name: days_since_registration
+    data_type: BIGINT
+  - name: customer_tenure_segment
+    data_type: VARCHAR
+  - name: loyalty_tier
+    data_type: VARCHAR
+  - name: points_balance
+    data_type: INT
+  - name: lifetime_value
+    data_type: DECIMAL(10, 2)
+  - name: value_segment
+    data_type: VARCHAR
+  - name: redemption_rate
+    data_type: DECIMAL(10, 2)
+  - name: total_transactions
+    data_type: BIGINT
+  - name: total_spent
+    data_type: DECIMAL(10, 2)
+  - name: avg_order_value
+    data_type: DECIMAL(10, 2)
+  - name: first_purchase_date
+    data_type: TIMESTAMP(3)
+  - name: last_purchase_date
+    data_type: TIMESTAMP(3)
+  - name: channels_used
+    data_type: BIGINT
+  - name: shopping_days
+    data_type: BIGINT
+  - name: transactions_last_90d
+    data_type: BIGINT
+  - name: spent_last_90d
+    data_type: DECIMAL(10, 2)
+  - name: customer_status
+    data_type: VARCHAR
+  - name: recency_score
+    data_type: INT
+  - name: frequency_score
+    data_type: INT
+  - name: monetary_score
+    data_type: INT
+  - name: customer_health_score
+    data_type: DECIMAL(10, 2)
+  - name: total_app_sessions
+    data_type: BIGINT
+  - name: total_session_minutes
+    data_type: INT
+  - name: avg_session_duration
+    data_type: INT
+  - name: app_engagement_score
+    data_type: DECIMAL(10, 2)
+  - name: last_app_use_date
+    data_type: DATE
+  - name: unique_device_types
+    data_type: BIGINT
+  - name: total_support_tickets
+    data_type: BIGINT
+  - name: resolved_support_tickets
+    data_type: BIGINT
+  - name: avg_satisfaction
+    data_type: DECIMAL(10, 2)
+  - name: last_ticket_date
+    data_type: TIMESTAMP(3)
+  - name: urgent_support_tickets
+    data_type: BIGINT
+  - name: support_satisfaction_level
+    data_type: VARCHAR
+  - name: is_app_user
+    data_type: BIGINT
+  - name: is_digital_native
+    data_type: BIGINT
+  - name: has_urgent_issues
+    data_type: BIGINT
+  - name: churn_risk_flag
+    data_type: BIGINT
+  - name: satisfaction_risk_flag
+    data_type: BIGINT
+  - name: channel_expansion_opportunity
+    data_type: BIGINT
+  - name: tier_upgrade_opportunity
+    data_type: BIGINT
+  - name: app_adoption_opportunity
+    data_type: BIGINT
+  - name: profile_created_at
+    data_type: TIMESTAMP(3)
+  - name: view_created_at
+    data_type: TIMESTAMP_LTZ(3)

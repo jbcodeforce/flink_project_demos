@@ -1,0 +1,35 @@
+version: 2
+models:
+- name: src_abc_shipments
+  description: Migrated from dml.src_abc_shipments.sql
+  columns:
+  - name: shipment_id
+    data_type: VARCHAR
+  - name: transaction_id
+    data_type: VARCHAR
+  - name: tracking_number
+    data_type: VARCHAR
+  - name: carrier
+    data_type: VARCHAR
+  - name: service_level
+    data_type: VARCHAR
+  - name: origin_location
+    data_type: VARCHAR
+  - name: street
+    data_type: VARCHAR
+  - name: city
+    data_type: VARCHAR
+  - name: zipcode
+    data_type: VARCHAR
+  - name: state
+    data_type: VARCHAR
+  - name: weight_kg
+    data_type: DECIMAL(8, 3)
+  - name: dimensions
+    data_type: VARCHAR
+  - name: target_ship_date
+    data_type: DATE
+  - name: shipment_status
+    data_type: VARCHAR
+  - name: shipping_cost
+    data_type: DECIMAL(8, 2)

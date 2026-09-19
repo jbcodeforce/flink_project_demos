@@ -1,0 +1,19 @@
+version: 2
+models:
+- name: src_sdp_tracking_events
+  description: Migrated from dml.src_sdp_tracking_events.sql
+  columns:
+  - name: event_id
+    data_type: VARCHAR
+  - name: tracking_number
+    data_type: VARCHAR
+  - name: event_timestamp
+    data_type: TIMESTAMP(3)
+  - name: event_type
+    data_type: VARCHAR
+  - name: location
+    data_type: VARCHAR
+  - name: description
+    data_type: VARCHAR
+  - name: carrier_status
+    data_type: VARCHAR

@@ -1,0 +1,222 @@
+version: 2
+seeds:
+- name: app_usage_raw
+  description: Migrated from dml.app_usage_raw.sql
+  config:
+    column_types:
+      usage_id: VARCHAR
+      customer_id: VARCHAR
+      session_date: DATE
+      session_start: TIMESTAMP(3)
+      session_duration_minutes: INT
+      pages_viewed: INT
+      actions_taken: INT
+      device_type: VARCHAR
+      app_version: VARCHAR
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: customers_raw
+  description: Migrated from dml.customers_raw.sql
+  config:
+    column_types:
+      customer_id: VARCHAR
+      first_name: VARCHAR
+      last_name: VARCHAR
+      email: VARCHAR
+      phone: VARCHAR
+      date_of_birth: DATE
+      gender: VARCHAR
+      registration_date: TIMESTAMP(3)
+      customer_segment: VARCHAR
+      preferred_channel: VARCHAR
+      address_line1: VARCHAR
+      city: VARCHAR
+      state: VARCHAR
+      zip_code: VARCHAR
+      country: VARCHAR
+      event_ts: TIMESTAMP(3)
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: loyalty_program_raw
+  description: Migrated from dml.loyalty_program_raw.sql
+  config:
+    column_types:
+      customer_id: VARCHAR
+      loyalty_tier: VARCHAR
+      points_balance: INT
+      points_earned_ytd: INT
+      points_redeemed_ytd: INT
+      tier_start_date: DATE
+      lifetime_value: DECIMAL(10, 2)
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: products_raw
+  description: Migrated from dml.products_raw.sql
+  config:
+    column_types:
+      product_id: VARCHAR
+      product_name: VARCHAR
+      category: VARCHAR
+      subcategory: VARCHAR
+      brand: VARCHAR
+      price: DECIMAL(10, 2)
+      cost: DECIMAL(10, 2)
+      weight_kg: DECIMAL(10, 3)
+      dimensions: VARCHAR
+      color: VARCHAR
+      size: VARCHAR
+      created_date: DATE
+      status: VARCHAR
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: shipments_raw
+  description: Migrated from dml.shipments_raw.sql
+  config:
+    column_types:
+      shipment_id: VARCHAR
+      transaction_id: VARCHAR
+      tracking_number: VARCHAR
+      carrier: VARCHAR
+      service_level: VARCHAR
+      origin_location: VARCHAR
+      destination_address: ROW<STREET STRING, CITY STRING, ZIPCODE STRING, STATE STRING>
+      weight_kg: DECIMAL(8, 3)
+      dimensions: VARCHAR
+      target_ship_date: DATE
+      shipment_status: VARCHAR
+      shipping_cost: DECIMAL(8, 2)
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.avro-registry.schema-context: .flink-dev
+      value.avro-registry.schema-context: .flink-dev
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: support_ticket_raw
+  description: Migrated from dml.support_ticket_raw.sql
+  config:
+    column_types:
+      ticket_id: VARCHAR
+      customer_id: VARCHAR
+      created_date: TIMESTAMP(3)
+      resolved_date: TIMESTAMP(3)
+      category: VARCHAR
+      priority: VARCHAR
+      status: VARCHAR
+      channel: VARCHAR
+      satisfaction_score: INT
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: tracking_events_raw
+  description: Migrated from dml.tracking_events_raw.sql
+  config:
+    column_types:
+      event_id: VARCHAR
+      tracking_number: VARCHAR
+      event_timestamp: TIMESTAMP(3)
+      event_type: VARCHAR
+      location: VARCHAR
+      description: VARCHAR
+      carrier_status: VARCHAR
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: transaction_items_raw
+  description: Migrated from dml.transaction_items_raw.sql
+  config:
+    column_types:
+      item_id: VARCHAR
+      transaction_id: VARCHAR
+      product_id: VARCHAR
+      quantity: INT
+      unit_price: DECIMAL(10, 2)
+      line_total: DECIMAL(10, 2)
+      discount_applied: DECIMAL(10, 2)
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all
+- name: tx_raw
+  description: Migrated from dml.tx_raw.sql
+  config:
+    column_types:
+      transaction_id: VARCHAR
+      customer_id: VARCHAR
+      transaction_date: TIMESTAMP(3)
+      channel: VARCHAR
+      store_id: VARCHAR
+      payment_method: VARCHAR
+      subtotal: DECIMAL(10, 2)
+      tax_amount: DECIMAL(10, 2)
+      discount_amount: DECIMAL(10, 2)
+      total_amount: DECIMAL(10, 2)
+      currency: VARCHAR
+      status: VARCHAR
+  meta:
+    flink_ddl_with_options:
+      changelog.mode: append
+      key.format: avro-registry
+      value.format: avro-registry
+      kafka.retention.time: '0'
+      kafka.producer.compression.type: snappy
+      scan.bounded.mode: unbounded
+      scan.startup.mode: earliest-offset
+      value.fields-include: all

@@ -1,0 +1,19 @@
+version: 2
+models:
+- name: src_c360_tx_items
+  description: Migrated from dml.src_c360_tx_items.sql
+  columns:
+  - name: item_id
+    data_type: VARCHAR
+  - name: transaction_id
+    data_type: VARCHAR
+  - name: product_id
+    data_type: VARCHAR
+  - name: quantity
+    data_type: INT
+  - name: unit_price
+    data_type: DECIMAL(10, 2)
+  - name: line_total
+    data_type: DECIMAL(10, 2)
+  - name: discount_applied
+    data_type: DECIMAL(10, 2)

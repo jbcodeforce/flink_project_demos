@@ -1,0 +1,215 @@
+version: 2
+sources:
+- name: sql_scripts
+  tables:
+  - name: app_usage_raw
+    identifier: app_usage_raw
+    columns:
+    - name: usage_id
+      data_type: VARCHAR
+    - name: customer_id
+      data_type: VARCHAR
+    - name: session_date
+      data_type: DATE
+    - name: session_start
+      data_type: TIMESTAMP(3)
+    - name: session_duration_minutes
+      data_type: INT
+    - name: pages_viewed
+      data_type: INT
+    - name: actions_taken
+      data_type: INT
+    - name: device_type
+      data_type: VARCHAR
+    - name: app_version
+      data_type: VARCHAR
+  - name: customers_raw
+    identifier: customers_raw
+    columns:
+    - name: customer_id
+      data_type: VARCHAR
+    - name: first_name
+      data_type: VARCHAR
+    - name: last_name
+      data_type: VARCHAR
+    - name: email
+      data_type: VARCHAR
+    - name: phone
+      data_type: VARCHAR
+    - name: date_of_birth
+      data_type: DATE
+    - name: gender
+      data_type: VARCHAR
+    - name: registration_date
+      data_type: TIMESTAMP(3)
+    - name: customer_segment
+      data_type: VARCHAR
+    - name: preferred_channel
+      data_type: VARCHAR
+    - name: address_line1
+      data_type: VARCHAR
+    - name: city
+      data_type: VARCHAR
+    - name: state
+      data_type: VARCHAR
+    - name: zip_code
+      data_type: VARCHAR
+    - name: country
+      data_type: VARCHAR
+    - name: event_ts
+      data_type: TIMESTAMP(3)
+  - name: loyalty_program_raw
+    identifier: loyalty_program_raw
+    columns:
+    - name: customer_id
+      data_type: VARCHAR
+    - name: loyalty_tier
+      data_type: VARCHAR
+    - name: points_balance
+      data_type: INT
+    - name: points_earned_ytd
+      data_type: INT
+    - name: points_redeemed_ytd
+      data_type: INT
+    - name: tier_start_date
+      data_type: DATE
+    - name: lifetime_value
+      data_type: DECIMAL(10, 2)
+  - name: products_raw
+    identifier: products_raw
+    columns:
+    - name: product_id
+      data_type: VARCHAR
+    - name: product_name
+      data_type: VARCHAR
+    - name: category
+      data_type: VARCHAR
+    - name: subcategory
+      data_type: VARCHAR
+    - name: brand
+      data_type: VARCHAR
+    - name: price
+      data_type: DECIMAL(10, 2)
+    - name: cost
+      data_type: DECIMAL(10, 2)
+    - name: weight_kg
+      data_type: DECIMAL(10, 3)
+    - name: dimensions
+      data_type: VARCHAR
+    - name: color
+      data_type: VARCHAR
+    - name: size
+      data_type: VARCHAR
+    - name: created_date
+      data_type: DATE
+    - name: status
+      data_type: VARCHAR
+  - name: shipments_raw
+    identifier: shipments_raw
+    columns:
+    - name: shipment_id
+      data_type: VARCHAR
+    - name: transaction_id
+      data_type: VARCHAR
+    - name: tracking_number
+      data_type: VARCHAR
+    - name: carrier
+      data_type: VARCHAR
+    - name: service_level
+      data_type: VARCHAR
+    - name: origin_location
+      data_type: VARCHAR
+    - name: destination_address
+      data_type: ROW<STREET STRING, CITY STRING, ZIPCODE STRING, STATE STRING>
+    - name: weight_kg
+      data_type: DECIMAL(8, 3)
+    - name: dimensions
+      data_type: VARCHAR
+    - name: target_ship_date
+      data_type: DATE
+    - name: shipment_status
+      data_type: VARCHAR
+    - name: shipping_cost
+      data_type: DECIMAL(8, 2)
+  - name: support_ticket_raw
+    identifier: support_ticket_raw
+    columns:
+    - name: ticket_id
+      data_type: VARCHAR
+    - name: customer_id
+      data_type: VARCHAR
+    - name: created_date
+      data_type: TIMESTAMP(3)
+    - name: resolved_date
+      data_type: TIMESTAMP(3)
+    - name: category
+      data_type: VARCHAR
+    - name: priority
+      data_type: VARCHAR
+    - name: status
+      data_type: VARCHAR
+    - name: channel
+      data_type: VARCHAR
+    - name: satisfaction_score
+      data_type: INT
+  - name: tracking_events_raw
+    identifier: tracking_events_raw
+    columns:
+    - name: event_id
+      data_type: VARCHAR
+    - name: tracking_number
+      data_type: VARCHAR
+    - name: event_timestamp
+      data_type: TIMESTAMP(3)
+    - name: event_type
+      data_type: VARCHAR
+    - name: location
+      data_type: VARCHAR
+    - name: description
+      data_type: VARCHAR
+    - name: carrier_status
+      data_type: VARCHAR
+  - name: transaction_items_raw
+    identifier: transaction_items_raw
+    columns:
+    - name: item_id
+      data_type: VARCHAR
+    - name: transaction_id
+      data_type: VARCHAR
+    - name: product_id
+      data_type: VARCHAR
+    - name: quantity
+      data_type: INT
+    - name: unit_price
+      data_type: DECIMAL(10, 2)
+    - name: line_total
+      data_type: DECIMAL(10, 2)
+    - name: discount_applied
+      data_type: DECIMAL(10, 2)
+  - name: tx_raw
+    identifier: tx_raw
+    columns:
+    - name: transaction_id
+      data_type: VARCHAR
+    - name: customer_id
+      data_type: VARCHAR
+    - name: transaction_date
+      data_type: TIMESTAMP(3)
+    - name: channel
+      data_type: VARCHAR
+    - name: store_id
+      data_type: VARCHAR
+    - name: payment_method
+      data_type: VARCHAR
+    - name: subtotal
+      data_type: DECIMAL(10, 2)
+    - name: tax_amount
+      data_type: DECIMAL(10, 2)
+    - name: discount_amount
+      data_type: DECIMAL(10, 2)
+    - name: total_amount
+      data_type: DECIMAL(10, 2)
+    - name: currency
+      data_type: VARCHAR
+    - name: status
+      data_type: VARCHAR

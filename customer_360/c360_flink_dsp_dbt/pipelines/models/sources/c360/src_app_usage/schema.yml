@@ -1,0 +1,23 @@
+version: 2
+models:
+- name: src_c360_app_usage
+  description: Migrated from dml.src_c360_app_usage.sql
+  columns:
+  - name: usage_id
+    data_type: VARCHAR
+  - name: customer_id
+    data_type: VARCHAR
+  - name: session_date
+    data_type: DATE
+  - name: session_start
+    data_type: TIMESTAMP(3)
+  - name: session_duration_minutes
+    data_type: INT
+  - name: pages_viewed
+    data_type: INT
+  - name: actions_taken
+    data_type: INT
+  - name: device_type
+    data_type: VARCHAR
+  - name: app_version
+    data_type: VARCHAR

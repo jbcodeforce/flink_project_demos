@@ -1,0 +1,21 @@
+transaction_id,customer_id,transaction_date,channel,store_id,payment_method,subtotal,tax_amount,discount_amount,total_amount,currency,status
+TXN001,CUST001,2024-05-15 14:30:00,online,,credit_card,299.99,24.00,30.00,293.99,USD,completed
+TXN002,CUST002,2024-05-16 10:15:00,store,ST001,debit_card,149.50,11.96,0.00,161.46,USD,completed
+TXN003,CUST003,2024-05-17 16:45:00,mobile,,paypal,89.99,7.20,9.00,88.19,USD,completed
+TXN004,CUST004,2024-05-18 11:20:00,online,,credit_card,199.99,16.00,0.00,215.99,USD,completed
+TXN005,CUST005,2024-05-19 13:30:00,store,ST002,cash,75.00,6.00,7.50,73.50,USD,completed
+TXN006,CUST006,2024-05-20 09:45:00,online,,credit_card,450.00,36.00,45.00,441.00,USD,completed
+TXN007,CUST007,2024-05-21 15:10:00,mobile,,apple_pay,125.99,10.08,0.00,136.07,USD,completed
+TXN008,CUST008,2024-05-22 12:25:00,store,ST001,debit_card,69.99,5.60,7.00,68.59,USD,completed
+TXN009,CUST009,2024-05-23 17:40:00,online,,credit_card,599.99,48.00,60.00,587.99,USD,completed
+TXN010,CUST010,2024-05-24 14:15:00,mobile,,google_pay,179.99,14.40,0.00,194.39,USD,completed
+TXN011,CUST011,2024-05-25 10:50:00,store,ST003,cash,39.99,3.20,4.00,39.19,USD,completed
+TXN012,CUST012,2024-05-26 16:30:00,online,,credit_card,329.99,26.40,33.00,323.39,USD,completed
+TXN013,CUST013,2024-05-27 11:05:00,mobile,,paypal,89.99,7.20,0.00,97.19,USD,completed
+TXN014,CUST014,2024-05-28 13:45:00,store,ST002,debit_card,159.99,12.80,16.00,156.79,USD,completed
+TXN015,CUST015,2024-05-29 15:20:00,online,,credit_card,249.99,20.00,25.00,244.99,USD,completed
+TXN016,CUST001,2024-06-01 09:30:00,mobile,,apple_pay,119.99,9.60,12.00,117.59,USD,completed
+TXN017,CUST003,2024-06-02 14:40:00,online,,credit_card,189.99,15.20,0.00,205.19,USD,completed
+TXN018,CUST005,2024-06-03 12:10:00,store,ST001,cash,95.00,7.60,9.50,93.10,USD,completed
+TXN019,CUST007,2024-06-04 16:25:00,mobile,,google_pay,279.99,22.40,28.00,274.39,USD,completed
+TXN020,CUST009,2024-06-05 11:15:00,online,,credit_card,399.99,32.00,0.00,431.99,USD,completed

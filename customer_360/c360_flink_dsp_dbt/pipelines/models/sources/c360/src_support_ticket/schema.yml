@@ -1,0 +1,23 @@
+version: 2
+models:
+- name: src_c360_support_ticket
+  description: Migrated from dml.src_c360_support_ticket.sql
+  columns:
+  - name: ticket_id
+    data_type: VARCHAR
+  - name: customer_id
+    data_type: VARCHAR
+  - name: created_date
+    data_type: TIMESTAMP(3)
+  - name: resolved_date
+    data_type: TIMESTAMP(3)
+  - name: category
+    data_type: VARCHAR
+  - name: priority
+    data_type: VARCHAR
+  - name: status
+    data_type: VARCHAR
+  - name: channel
+    data_type: VARCHAR
+  - name: satisfaction_score
+    data_type: INT

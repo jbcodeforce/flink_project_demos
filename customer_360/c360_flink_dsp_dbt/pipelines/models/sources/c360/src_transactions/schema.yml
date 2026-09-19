@@ -1,0 +1,49 @@
+version: 2
+models:
+- name: src_c360_transactions
+  description: Migrated from dml.src_c360_transactions.sql
+  columns:
+  - name: transaction_id
+    data_type: VARCHAR
+  - name: customer_id
+    data_type: VARCHAR
+  - name: transaction_date
+    data_type: TIMESTAMP(3)
+  - name: channel
+    data_type: VARCHAR
+  - name: store_id
+    data_type: VARCHAR
+  - name: payment_method
+    data_type: VARCHAR
+  - name: subtotal
+    data_type: DECIMAL(10, 2)
+  - name: tax_amount
+    data_type: DECIMAL(10, 2)
+  - name: discount_amount
+    data_type: DECIMAL(10, 2)
+  - name: total_amount
+    data_type: DECIMAL(10, 2)
+  - name: currency
+    data_type: VARCHAR
+  - name: status
+    data_type: VARCHAR
+  - name: transaction_date_only
+    data_type: DATE
+  - name: transaction_hour
+    data_type: BIGINT
+  - name: day_of_week
+    data_type: BIGINT
+  - name: transaction_month
+    data_type: BIGINT
+  - name: transaction_quarter
+    data_type: BIGINT
+  - name: transaction_year
+    data_type: BIGINT
+  - name: channel_group
+    data_type: VARCHAR
+  - name: has_discount
+    data_type: INT
+  - name: discount_rate
+    data_type: DECIMAL(10, 2)
+  - name: order_size_category
+    data_type: VARCHAR

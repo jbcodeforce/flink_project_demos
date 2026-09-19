@@ -1,0 +1,45 @@
+version: 2
+models:
+- name: src_c360_customers
+  description: Migrated from dml.src_c360_customers.sql
+  columns:
+  - name: customer_id
+    data_type: VARCHAR
+  - name: first_name
+    data_type: VARCHAR
+  - name: last_name
+    data_type: VARCHAR
+  - name: email
+    data_type: VARCHAR
+  - name: phone
+    data_type: VARCHAR
+  - name: date_of_birth
+    data_type: DATE
+  - name: gender
+    data_type: VARCHAR
+  - name: registration_date
+    data_type: TIMESTAMP(3)
+  - name: customer_segment
+    data_type: VARCHAR
+  - name: preferred_channel
+    data_type: VARCHAR
+  - name: address_line1
+    data_type: VARCHAR
+  - name: city
+    data_type: VARCHAR
+  - name: state
+    data_type: VARCHAR
+  - name: zip_code
+    data_type: VARCHAR
+  - name: country
+    data_type: VARCHAR
+  - name: age_years
+    data_type: BIGINT
+  - name: days_since_registration
+    data_type: BIGINT
+  - name: generation_segment
+    data_type: VARCHAR
+  - name: missing_email_flag
+    data_type: BIGINT
+  - name: missing_phone_flag
+    data_type: BIGINT

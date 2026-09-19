@@ -1,0 +1,41 @@
+version: 2
+models:
+- name: src_c360_products
+  description: Migrated from dml.src_c360_products.sql
+  columns:
+  - name: product_id
+    data_type: VARCHAR
+  - name: product_name
+    data_type: VARCHAR
+  - name: category
+    data_type: VARCHAR
+  - name: subcategory
+    data_type: VARCHAR
+  - name: brand
+    data_type: VARCHAR
+  - name: price
+    data_type: DECIMAL(10, 2)
+  - name: cost
+    data_type: DECIMAL(10, 2)
+  - name: weight_kg
+    data_type: DECIMAL(10, 3)
+  - name: dimensions
+    data_type: VARCHAR
+  - name: color
+    data_type: VARCHAR
+  - name: size
+    data_type: VARCHAR
+  - name: created_date
+    data_type: DATE
+  - name: status
+    data_type: VARCHAR
+  - name: gross_margin
+    data_type: DECIMAL(10, 2)
+  - name: margin_percent
+    data_type: DECIMAL(10, 2)
+  - name: days_since_launch
+    data_type: BIGINT
+  - name: price_segment
+    data_type: VARCHAR
+  - name: category_group
+    data_type: VARCHAR

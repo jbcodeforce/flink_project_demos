@@ -1,0 +1,19 @@
+version: 2
+models:
+- name: dim_sdp_estimated_delivery
+  description: Migrated from dml.int_sdp_estimated_delivery.sql
+  columns:
+  - name: shipment_id
+    data_type: VARCHAR
+  - name: event_id
+    data_type: VARCHAR
+  - name: event_timestamp
+    data_type: TIMESTAMP(3)
+  - name: current_location
+    data_type: VARCHAR
+  - name: estimated_delivery_ts
+    data_type: TIMESTAMP(3)
+  - name: time_window_start
+    data_type: TIMESTAMP(3)
+  - name: time_window_end
+    data_type: TIMESTAMP(3)

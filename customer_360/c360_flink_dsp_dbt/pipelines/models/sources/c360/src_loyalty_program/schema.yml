@@ -1,0 +1,29 @@
+version: 2
+models:
+- name: src_c360_loyalty_program
+  description: Migrated from dml.src_c360_loyalty_program.sql
+  columns:
+  - name: customer_id
+    data_type: VARCHAR
+  - name: loyalty_tier
+    data_type: VARCHAR
+  - name: points_balance
+    data_type: INT
+  - name: points_earned_ytd
+    data_type: INT
+  - name: points_redeemed_ytd
+    data_type: INT
+  - name: tier_start_date
+    data_type: DATE
+  - name: lifetime_value
+    data_type: DECIMAL(10, 2)
+  - name: net_points_ytd
+    data_type: INT
+  - name: redemption_rate
+    data_type: DECIMAL(10, 2)
+  - name: days_in_current_tier
+    data_type: INT
+  - name: tier_rank
+    data_type: INT
+  - name: value_segment
+    data_type: VARCHAR

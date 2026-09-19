@@ -1,0 +1,63 @@
+version: 2
+models:
+- name: dim_c360_customer_transactions
+  description: Migrated from dml.dim_c360_customer_transactions.sql
+  columns:
+  - name: customer_id
+    data_type: VARCHAR
+  - name: first_name
+    data_type: VARCHAR
+  - name: last_name
+    data_type: VARCHAR
+  - name: email
+    data_type: VARCHAR
+  - name: customer_segment
+    data_type: VARCHAR
+  - name: preferred_channel
+    data_type: VARCHAR
+  - name: generation_segment
+    data_type: VARCHAR
+  - name: age_years
+    data_type: BIGINT
+  - name: days_since_registration
+    data_type: BIGINT
+  - name: transaction_id
+    data_type: VARCHAR
+  - name: transaction_date
+    data_type: TIMESTAMP(3)
+  - name: channel
+    data_type: VARCHAR
+  - name: channel_group
+    data_type: VARCHAR
+  - name: total_amount
+    data_type: DECIMAL(10, 2)
+  - name: discount_amount
+    data_type: DECIMAL(10, 2)
+  - name: order_size_category
+    data_type: VARCHAR
+  - name: items_purchased
+    data_type: BIGINT
+  - name: total_quantity
+    data_type: BIGINT
+  - name: avg_item_price
+    data_type: DECIMAL(10, 2)
+  - name: unique_categories
+    data_type: BIGINT
+  - name: unique_brands
+    data_type: BIGINT
+  - name: purchased_category_groups
+    data_type: MULTISET<STRING>
+  - name: purchased_brands
+    data_type: MULTISET<STRING>
+  - name: transaction_hour
+    data_type: BIGINT
+  - name: day_of_week
+    data_type: BIGINT
+  - name: transaction_month
+    data_type: BIGINT
+  - name: transaction_quarter
+    data_type: BIGINT
+  - name: transaction_year
+    data_type: BIGINT
+  - name: used_preferred_channel
+    data_type: INT
